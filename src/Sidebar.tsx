@@ -1,9 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-// TODO: Types
+// Types
 type SidebarProps = {
   items: any
+}
+
+type SidebarItem = {
+  name: string,
+  link?: string,
+  children?: SidebarItem[]
 }
 
 // Styles
@@ -46,10 +52,10 @@ const Links = styled.ul`
 
 const Sidebar = (props: SidebarProps) => {
 
-  const mapItems = (items: any) => {
+  const mapItems = (items: SidebarItem[] | undefined) => {
     let links = null;
     if (items) {
-      links = items.map((item: any) => {
+      links = items.map((item: SidebarItem) => {
         let children = mapItems(item.children);
         return (
           <li key={item.name}>
