@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Home",
+    "link": "/"
+  },
+  {
+    "name": "Engines",
+    "link": "/engines",
+    "children": [
+      {
+        "name": "Liquid Propellant",
+        "children": [
+          {
+            "name": "POC-1 Kerosene/Gaseous Oxygen"
+          },
+          {
+            "name": "Hydrogen Peroxide"
+          }
+        ]
+      },
+      {
+        "name": "Solid Propellant",
+        "children": [
+          {
+            "name": "KNDX-1",
+            "children": [
+              {
+                "name": "Propellant manufacturing"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vehicles",
+    "link": "/vehicles",
+    "children": [
+      {
+        "name": "Vertical Integrator",
+        "children": [
+          {
+            "name": "Recovery"
+          },
+          {
+            "name": "Avionics"
+          },
+          {
+            "name": "Flight 1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "About Me",
+    "link": "/about"
+  }
+]

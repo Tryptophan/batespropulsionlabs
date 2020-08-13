@@ -1,8 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
+// Components
+import Sidebar from "./Sidebar";
+
 // Text
 import text from "./text.json";
+
+// Sidebar items
+import sidebarItems from "./sidebar-items.json";
 
 // Images
 import HeaderBackground from "./assets/header.png";
@@ -34,12 +40,19 @@ const Header = styled.div`
 const Description = styled.div`
   margin: 0 auto auto 15%;
   width: 30%;
+  background-color: #33373f;
+  padding: 20px;
+  border-left: 10px solid #282c34;
+  position: relative;
+  top: -40px;
+  color: white;
 `;
 
 const ProjectsTitle = styled.div`
-  h2 {
-    text-align: center;
-  }
+  color: #282c34;
+  margin: 0 auto auto 15%;
+  width: 30%;
+  margin-bottom: 60px;
 `;
 
 const Projects = styled.div`
@@ -49,6 +62,7 @@ const Projects = styled.div`
   margin: 0 auto;
   width: 70%;
   margin-bottom: 10vh;
+  color: #282c34;
 `;
 
 const Project = styled.div`
@@ -68,6 +82,8 @@ const Project = styled.div`
 const App = () => {
   return (
     <Root>
+      {/* Sidebar navigation */}
+      <Sidebar items={sidebarItems} />
       {/* Header image and title */}
       <Header>
         <h1>Bates Propulsion Labs</h1>
@@ -77,7 +93,7 @@ const App = () => {
         <p>{text.home.description}</p>
       </Description>
       {/* Project links */}
-      <ProjectsTitle><h2>Main Projects</h2></ProjectsTitle>
+      <ProjectsTitle><h2>Check out what we're building...</h2></ProjectsTitle>
       <Projects>
         <Project>
           <h3>POC-1</h3>
