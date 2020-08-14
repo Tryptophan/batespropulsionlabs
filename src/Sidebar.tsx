@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // Types
 type SidebarProps = {
@@ -21,6 +22,13 @@ const Root = styled.div`
   padding: 20px;
   color: white;
   z-index: 999;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 `;
 
 const Toggle = styled.div`
@@ -59,7 +67,7 @@ const Sidebar = (props: SidebarProps) => {
         let children = mapItems(item.children);
         return (
           <li key={item.name}>
-            {item.name}
+            {item.link ? <Link to={item.link}>{item.name}</Link> : item.name}
             <Links>{children}</Links>
           </li>
         );
@@ -74,7 +82,7 @@ const Sidebar = (props: SidebarProps) => {
 
   return (
     <Root>
-      <Toggle><div/><div/><div/></Toggle>
+      <Toggle><div /><div /><div /></Toggle>
       {links}
     </Root>
   );

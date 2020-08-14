@@ -1,5 +1,34 @@
 {
   "home": {
     "description": "Bates Propulsion Labs is a small group of engineers working on a variety of different propulsion systems and launch vehicles. We are sharing our progress with the world to help inspire others to build their own rocketry projects."
+  },
+  "poc1": {
+    "engineSpecs": [
+      {
+        "title": "Chamber Pressure",
+        "spec": "300 PSI"
+      },
+      {
+        "title": "Fuel",
+        "spec": "Liquid Kerosene"
+      },
+      {
+        "title": "Oxidizer",
+        "spec": "Gaseous Oxygen"
+      },
+      {
+        "title": "O/F",
+        "spec": "2.31"
+      },
+      {
+        "title": "Total Flow Rate",
+        "spec": "0.95 lbm/s"
+      },
+      {
+        "title": "Vehicle",
+        "spec": "Test Stand Only"
+      }
+    ],
+    "summary": "POC-1 was built as a test engine to gain experience designing, building and operating a rocket propulsion system. This engine is not intend to fly as it uses a water cooling system. The cooling system is design as a regen system, but the flow rates required exceed that of the fuel system necessitating and external coolant supply."
   }
 }
