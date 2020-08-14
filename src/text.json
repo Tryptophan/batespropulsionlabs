@@ -29,6 +29,6 @@
         "spec": "Test Stand Only"
       }
     ],
-    "summary": "POC-1 was built as a test engine to gain experience designing, building and operating a rocket propulsion system. This engine is not intend to fly as it uses a water cooling system. The cooling system is design as a regen system, but the flow rates required exceed that of the fuel system necessitating and external coolant supply."
+    "summary": "The POC-1 was built as a test engine to gain experience designing, building and operating a rocket propulsion system. This engine is not intended to fly as it uses a water cooling system. The cooling system is design as a regen system, but the flow rates required exceed that of the fuel system necessitating and external coolant supply."
   }
 }
