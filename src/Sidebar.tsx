@@ -1,16 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import SidebarItem from "./SidebarItem";
+
+import sidebarItems from "./sidebar-items.json";
 
 // Types
 type SidebarProps = {
   items: any
-}
-
-type SidebarItem = {
-  name: string,
-  link?: string,
-  children?: SidebarItem[]
 }
 
 // Styles
@@ -22,19 +18,29 @@ const Root = styled.div`
   padding: 20px;
   color: white;
   z-index: 999;
-  a {
-    text-decoration: none;
-    color: white;
+  > ul:first-of-type {
+    padding-left: 0px !important;
   }
-  a:hover {
-    text-decoration: underline;
+  > div {
+    margin-bottom: 20px;
+  }
+`;
+
+const Collapsed = styled(Root)`
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border-radius: 5px;
+  top: 10px;
+  left: 10px;
+  > div {
+    margin-bottom: 0px;
   }
 `;
 
 const Toggle = styled.div`
   width: 20px;
   height: 20px;
-  margin-left: 10px;
   border-radius: 5px;
   border: 2px solid white;
   display: flex;
@@ -48,44 +54,32 @@ const Toggle = styled.div`
     border-radius: 5px;
     background-color: white;
   }
-`;
-
-const Links = styled.ul`
-  list-style: none;
-  padding-left: 10px;
-  li {
-    margin: 5px 0 5px 0;
+  :hover {
+    cursor: pointer;
   }
 `;
 
 const Sidebar = (props: SidebarProps) => {
+  const [collapsed, toggle] = useState(true);
 
-  const mapItems = (items: SidebarItem[] | undefined) => {
-    let links = null;
-    if (items) {
-      links = items.map((item: SidebarItem) => {
-        let children = mapItems(item.children);
-        return (
-          <li key={item.name}>
-            {item.link ? <Link to={item.link}>{item.name}</Link> : item.name}
-            <Links>{children}</Links>
-          </li>
-        );
-      });
-    }
+  if (collapsed) {
     return (
-      <Links>{links}</Links>
-    )
-  };
+      <Collapsed>
+        <Toggle onClick={() => toggle(!collapsed)}><div /><div /><div /></Toggle>
+      </Collapsed>
+    );
+  } else {
+    const items = sidebarItems.map((item) => (
+      <SidebarItem item={item} />
+    ));
 
-  const links = mapItems(props.items);
-
-  return (
-    <Root>
-      <Toggle><div /><div /><div /></Toggle>
-      {links}
-    </Root>
-  );
+    return (
+      <Root>
+        <Toggle onClick={() => toggle(!collapsed)}><div /><div /><div /></Toggle>
+        {items}
+      </Root>
+    );
+  }
 }
 
 export default Sidebar;

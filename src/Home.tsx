@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BrowserRouter, Link} from "react-router-dom";
+import { useHistory, BrowserRouter } from "react-router-dom";
 
 // Text
 import text from "./text.json";
@@ -78,7 +78,15 @@ const Project = styled.div`
   }
 `;
 
+const Link = styled.span`
+  :hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+`;
+
 const Home = () => {
+  const history = useHistory();
   return (
     <Root>
       <BrowserRouter>
@@ -94,14 +102,14 @@ const Home = () => {
         <ProjectsTitle><h2>Check out what we're building...</h2></ProjectsTitle>
         <Projects>
           <Project>
-            <Link to="/poc-1">
+            <Link onClick={() => history.push("/poc-1")}>
               <h3>POC-1</h3>
               <img src={POC1} alt="POC-1"></img>
               <h3 className="ProjectFooter">Kerosene/Gaseous Oxygen</h3>
             </Link>
           </Project>
           <Project>
-            <Link to="/kndx-1">
+            <Link onClick={() => history.push("/kndx-1")}>
               <h3>Vertical Integrator</h3>
               <img src={SolidRocket} alt="Solid Rocket"></img>
               <h3 className="ProjectFooter">Experimental Solid Rocket Test Platform</h3>
