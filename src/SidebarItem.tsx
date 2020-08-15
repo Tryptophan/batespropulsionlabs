@@ -68,7 +68,7 @@ const SidebarItem = (props: SidebarItemProps) => {
       return (
         <Root>
           <Toggle onClick={() => toggle(!collapsed)}>
-            <Name>{props.item.name}</Name><Arrow>&#9660;</Arrow>
+            <Name>{props.item.name}</Name><Arrow>&#9650;</Arrow>
           </Toggle>
           <SidebarItems>
             {items}
