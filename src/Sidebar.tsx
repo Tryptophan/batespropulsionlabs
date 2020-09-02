@@ -69,8 +69,8 @@ const Sidebar = (props: SidebarProps) => {
       </Collapsed>
     );
   } else {
-    const items = sidebarItems.map((item) => (
-      <SidebarItem item={item} />
+    const items = sidebarItems.map((item, index) => (
+      <SidebarItem key={index} item={item} />
     ));
 
     return (

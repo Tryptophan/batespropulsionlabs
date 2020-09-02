@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { useHistory, BrowserRouter } from "react-router-dom";
 
+// Components
+import { POC1_BC } from "./breadcrumb-links";
+
 // Text
 import text from "./text.json";
 
@@ -102,7 +105,7 @@ const Home = () => {
         <ProjectsTitle><h2>Check out what we're building...</h2></ProjectsTitle>
         <Projects>
           <Project>
-            <Link onClick={() => history.push("/poc-1")}>
+            <Link onClick={() => history.push(POC1_BC.link)}>
               <h3>POC-1</h3>
               <img src={POC1} alt="POC-1"></img>
               <h3 className="ProjectFooter">Kerosene/Gaseous Oxygen</h3>
