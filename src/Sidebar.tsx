@@ -5,8 +5,14 @@ import SidebarItem from "./SidebarItem";
 import sidebarItems from "./sidebar-items.json";
 
 // Types
+type Item = {
+  name: string,
+  link: string,
+  children?: Item[]
+}
+
 type SidebarProps = {
-  items: any
+  items: Item[]
 }
 
 // Styles

@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 // Types
 type Item = {
   name: string,
-  link?: string,
+  link: string,
   children?: Item[]
 }
 
@@ -21,22 +21,25 @@ const Root = styled.li`
   font-size: 14px;
 `;
 
-const Link = styled(Root)`
+const Link = styled.span`
   :hover {
     text-decoration: underline;
   }
 `;
 
-const Name = styled.span`
-  margin-right: 5px;
-`;
-
-const Toggle = styled.span`
-
+const ItemComp = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px 20px 10px;
+  border-radius: 5px;
+  :hover {
+    background-color: #282c34;
+  }
 `;
 
 const Arrow = styled.span`
-  font-size: 6px;
+  font-size: 10px;
 `;
 
 const SidebarItems = styled.ul`
@@ -52,46 +55,53 @@ const SidebarItem = (props: SidebarItemProps) => {
   const history = useHistory();
   const [collapsed, toggle] = useState(true);
 
-  if (props.item.children) {
-    if (collapsed) {
-      return (
-        <Root>
-          <Toggle onClick={() => toggle(!collapsed)}>
-            <Name>{props.item.name}</Name><Arrow>&#9660;</Arrow>
-          </Toggle>
-        </Root>
-      );
-    } else {
-      const items = props.item.children.map((item) => (
-        <SidebarItem item={item} />
-      ));
-      return (
-        <Root>
-          <Toggle onClick={() => toggle(!collapsed)}>
-            <Name>{props.item.name}</Name><Arrow>&#9650;</Arrow>
-          </Toggle>
+  if (collapsed) {
+    return (
+      <Root>
+        <ItemComp onClick={(e) => {
+          if (props.item.children) {
+            e.stopPropagation();
+            toggle(!collapsed);
+          }
+        }}>
+          <Link onClick={() => history.push(props.item.link!)}>
+            {props.item.name}
+          </Link>
+          { props.item.children ?
+            <Arrow>&#9660;</Arrow>
+            : null
+          }
+        </ItemComp>
+      </Root>
+    );
+  } else {
+    const items = props.item.children && props.item.children.map((item) => (
+      <SidebarItem item={item} />
+    ));
+    return (
+      <Root>
+        <ItemComp onClick={(e) => {
+          if (props.item.children) {
+            e.stopPropagation();
+            toggle(!collapsed);
+          }
+        }}>
+          <Link onClick={() => history.push(props.item.link!)}>
+            {props.item.name}
+          </Link>
+          { props.item.children ?
+            <Arrow>&#9650;</Arrow>
+            : null
+          }
+        </ItemComp>
+        { props.item.children ?
           <SidebarItems>
             {items}
           </SidebarItems>
-        </Root>
-      );
-    }
-  } else {
-    if (props.item.link) {
-      return (
-        <Root onClick={() => history.push(props.item.link!)}>
-          <Link>{props.item.name}</Link>
-        </Root>
-      );
-    } else {
-      return (
-        <Root>
-          <Toggle onClick={() => toggle(!collapsed)}>
-            <Name>{props.item.name}</Name>
-          </Toggle>
-        </Root>
-      );
-    }
+          : null
+        }
+      </Root>
+    );
   }
 }
 

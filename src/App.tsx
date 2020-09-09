@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { BrowserRouter, Switch, Route, useLocation } from "react-router-dom";
-import * as breadcrumbLinks from "./breadcrumb-links";
-import { Breadcrumb } from "./types";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // Components
 import Home from "./Home";
@@ -20,39 +18,9 @@ import text from "./text.json";
 const Root = styled.div`
 `;
 
-const BreadcrumbsRoot = styled.div`
-  width: 70%;
-  margin: 0 auto;
-  img {
-    width: 80%;
-  }
-  h1 {
-    color: #282c34;
-    margin: 0px;
-  }
-  padding-top: 20px;
-`;
-
 // No actual content on page, just indexes other pages with breadcrumbs
-const IndexPage = () => {
-  const location = useLocation();
-  useEffect(() => {
-  }, [location]);
-
-  let breadcrumbs: Breadcrumb[] = [];
-  // Check the page url matches an existing breadcrumb
-  for (let breadcrumb of Object.values(breadcrumbLinks)) {
-    if (location.pathname.includes(breadcrumb.link)) {
-      breadcrumbs.push(breadcrumb);
-    }
-  }
-
-  return (
-    <BreadcrumbsRoot>
-      <Breadcrumbs breadcrumbs={breadcrumbs} />
-    </BreadcrumbsRoot>
-  );
-}
+// const IndexPage = () => {
+// }
 
 const App = () => {
   return (
@@ -60,16 +28,22 @@ const App = () => {
       <BrowserRouter>
         {/* Sidebar navigation */}
         <Sidebar items={sidebarItems} />
+        {/* Breadcrumbs, don't render on home or about */}
+        <Switch>
+          <Route render={({location}) => {
+            return location.pathname !== "/" && location.pathname !== "/about" ? <Breadcrumbs /> : null;
+          }} />
+        </Switch>
         <Switch>
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path={breadcrumbLinks.POC1_BC.link}>
+          <Route path="/engines/liquid-propellant/poc-1">
             <POC1 engineSpecs={text.poc1.engineSpecs} />
           </Route>
-          <Route>
+          {/* <Route>
             <IndexPage />
-          </Route>
+          </Route> */}
         </Switch>
       </BrowserRouter>
     </Root>

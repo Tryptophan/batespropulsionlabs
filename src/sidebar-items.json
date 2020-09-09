@@ -9,29 +9,51 @@
     "children": [
       {
         "name": "Liquid Propellant",
+        "link": "/engines/liquid-propellant",
         "children": [
           {
-            "name": "Kerosene/Gaseous Oxygen",
+            "name": "POC-1 Kerosene/Gaseous Oxygen",
+            "link": "/engines/liquid-propellant/poc-1",
             "children": [
               {
-                "name": "POC-1",
-                "link": "/engines/liquid-propellant/kerosene-gaseous-oxygen/poc-1"
+                "name": "Engine Assembly",
+                "link": "/engines/liquid-propellant/poc-1#engine-assembly"
+              },
+              {
+                "name": "Test Stand",
+                "link": "/engines/liquid-propellant/poc-1#test-stand"
+              },
+              {
+                "name": "DAQ",
+                "link": "/engines/liquid-propellant/poc-1#daq"
+              },
+              {
+                "name": "Pneumatic Valves",
+                "link": "/engines/liquid-propellant/poc-1#pneumatic-valves"
+              },
+              {
+                "name": "Throttle Valves",
+                "link": "/engines/liquid-propellant/poc-1#throttle-valves"
               }
             ]
           },
           {
-            "name": "Hydrogen Peroxide"
+            "name": "Nitrous Oxide",
+            "link": "/engines/liquid-propellant/nitrous-oxide"
           }
         ]
       },
       {
         "name": "Solid Propellant",
+        "link": "/engines/solid-propellant",
         "children": [
           {
             "name": "KNDX-1",
+            "link": "/engines/solid-propellant/kndx-1",
             "children": [
               {
-                "name": "Propellant manufacturing"
+                "name": "Propellant Manufacturing",
+                "link": "/engines/solid-propellant/kndx-1#propellant-manufacturing"
               }
             ]
           }
@@ -45,22 +67,26 @@
     "children": [
       {
         "name": "Vertical Integrator",
+        "link": "/vehicles/vertical-integrator",
         "children": [
           {
-            "name": "Recovery"
+            "name": "Recovery",
+            "link": "/vehicles/vertical-integrator#recovery"
           },
           {
-            "name": "Avionics"
+            "name": "Avionics",
+            "link": "/vehicles/vertical-integrator#avionics"
           },
           {
-            "name": "Flight 1"
+            "name": "Flight 1",
+            "link": "/vehicles/vertical-integrator#flight-1"
           }
         ]
       }
     ]
   },
   {
-    "name": "About Me",
+    "name": "About Us",
     "link": "/about"
   }
 ]

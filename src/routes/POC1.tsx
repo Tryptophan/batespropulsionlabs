@@ -2,17 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
 
-// Components
-import Breadcrumbs from "../Breadcrumbs";
-
 // Text
 import text from "../text.json";
 
 // Images
 import POC1Img from "../assets/poc-1.png";
-
-// Types
-import * as BREADCRUMB from "../breadcrumb-links";
 
 // Types
 type POC1Props = {
@@ -94,12 +88,6 @@ const POC1 = (props: POC1Props) => {
   ));
   return (
     <Root>
-      <Breadcrumbs breadcrumbs={[
-        BREADCRUMB.ENGINES,
-        BREADCRUMB.LIQUID_PROPELLANT,
-        BREADCRUMB.KEROSENE_GASEOUS_OXYGEN,
-        BREADCRUMB.POC1_BC
-      ]} />
       <h1>POC-1 Rocket Motor</h1>
       <h2>Overview</h2>
       <Engine>
