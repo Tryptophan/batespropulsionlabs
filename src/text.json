@@ -71,5 +71,42 @@
         "Can be used with gaseous oxygen and kerosene"
       ]
     }
-  }
+  },
+  "about": [
+    {
+      "name": "Eddie Bates",
+      "title": "Chief Engineer/Founder",
+      "industryJob": "Propulsion components Engineer SpaceX",
+      "bio": "After coming back to school from SpaceX I needed a project to fill my time and learn from, I felt like I'd learned most of what I could from FSAE so I set out to build my own rocket engine. I grew the project to include some other members and after the first static firing  we started working on some other propulsion/rocketry projects from a cryogenic propulsion system for our capstone to small scale solid rockets."
+    },
+    {
+      "name": "Sam Aceves",
+      "title": "System/Recovery/Ignitor/Valves",
+      "contributions": [
+        "POC-1 Pneumatics Valves",
+        "POC-1 Throttle Valves",
+        "Vertical Integrator - Recovery"
+      ],
+      "industryJob": "Raytheon Mechanical Engineering Intern",
+      "bio": "While I was the payload team lead for IREC, I was asked to join Eddie's team to help design, manufacture, and test a rocket engine. Upon joining the team, I tried to get involved with multiple areas of the projects. I designed mounting and actuation structures for the valves on POC-1. I created a P&ID of the entire system for the cryogenic rocket engine. I gained hands on experience with rocket engine components and an understanding of  fluid flow through the system . I thrive in fast-paced, busy work environments and long to continue working with like-minded individuals who are passionate engineers. I hope to apply this knowledge and experience to future development of innovative technology for the aerospace and defense industry."
+    },
+    {
+      "name": "Dhruv",
+      "title": "Electrical Lead",
+      "industryJob": "Tinker Air Force Base Electrical Engineering Intern",
+      "bio": "I met Eddie through the FSAE team at UTD. I was asked to join the team by Eddie just prior to the warm firing of POC-1 as the test stand needed an overhaul of its control system. During my time here I have redesigned the controls and data collection system for the test stand as well as designed flight versions of these systems with telemetry for integration into our present and future launch vehicles. I have also been working on propellant tank design, throttle valve assemblies, and recovery systems for the NOS rocket. My interests center around embedded systems, mixed signal processing, and RF/Radar design."
+    },
+    {
+      "name": "Chris",
+      "title": "Additive Manufacturing Engineer",
+      "industryJob": "UT Dallas Student",
+      "bio": ""
+    },
+    {
+      "name": "Jacob Greenway",
+      "title": "Web Designer",
+      "industryJob": "Software Engineer Dell EMC",
+      "bio": ""
+    }
+  ]
 }

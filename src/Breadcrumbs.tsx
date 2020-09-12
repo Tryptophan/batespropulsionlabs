@@ -17,7 +17,6 @@ type SidebarItem = {
 }
 
 type BreadcrumbsProps = {
-  // breadcrumbs: Breadcrumb[]
 }
 
 const Root = styled.div`
