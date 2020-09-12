@@ -63,6 +63,13 @@
       },
       "valveMounts": "After selecting the best actuation design for the valve, I had to design mounts to secure the valves on the test stand. Initially, I 3D printed valve mounts that used the hex feature of the valve to prevent rotation and secure the valve in place. Unfortunately, as the technicians tried to torque fittings on the inlet and outlet of the valves, they would apply so much force on my mounts that they mount would break. This happened constantly.",
       "finalProduct": "After testing, it was concluded that the first design was the most cost effective, compact, easy to assemble, and simplest design. With the pneumatic cylinder that it was strong enough even at 30 psi to close the valve without any stalling issues. It was also noted that the position of the pneumatic valve with relation to the valve handle was very important as to not stall when opening and closing the valve."
+    },
+    "throttleValves": {
+      "designIntent": [
+        "Create a valve mount and actuation system to throttle flow of propellants to engine",
+        "Must withstand 500 psi",
+        "Can be used with gaseous oxygen and kerosene"
+      ]
     }
   }
 }

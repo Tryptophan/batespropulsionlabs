@@ -83,6 +83,9 @@ import PneumaticValvesImg13 from "../assets/poc1-pneumatic-valves/pneumatic-valv
 import PneumaticValvesImg14 from "../assets/poc1-pneumatic-valves/pneumatic-valves-14.jpg";
 import PneumaticValvesImg15 from "../assets/poc1-pneumatic-valves/pneumatic-valves-15.jpg";
 
+// Throttle Valves Images
+import ThrottleValvesImg1 from "../assets/poc1-throttle-valves/throttle-valves-1.jpg";
+
 // Components
 import CaptionedImage from "../CaptionedImage";
 
@@ -200,6 +203,14 @@ const AlphaList = styled.ul`
 `;
 
 const PneumaticValves = styled.div``;
+
+const ThrottleValves = styled.div``;
+
+const ThrottleValveDesign = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+`;
 
 const POC1 = (props: POC1Props) => {
   const titles = props.engineSpecs.map(item => (
@@ -440,12 +451,16 @@ const POC1 = (props: POC1Props) => {
     }
   ]
 
-  let designIntent = text.poc1.pneumaticValves.designIntent.map((intent, index) => (
+  let pneumaticDesignIntent = text.poc1.pneumaticValves.designIntent.map((intent, index) => (
     <li key={index}>{intent}</li>
   ));
 
   let design2List = text.poc1.pneumaticValves.design2.parts.map((part, index) => (
     <li key={index}>{part}</li>
+  ));
+
+  let throttleDesignIntent = text.poc1.throttleValves.designIntent.map((intent, index) => (
+    <li key={index}>{intent}</li>
   ));
 
   return (
@@ -539,7 +554,7 @@ const POC1 = (props: POC1Props) => {
         <DesignIntent>
           <h3>Design Intent</h3>
           <ul>
-            {designIntent}
+            {pneumaticDesignIntent}
           </ul>
         </DesignIntent>
         <h3>Design 1</h3>
@@ -564,6 +579,17 @@ const POC1 = (props: POC1Props) => {
         <p>{text.poc1.pneumaticValves.finalProduct}</p>
         <ImageGallery showPlayButton={false} items={pneumaticValvesFinalProduct} />
       </PneumaticValves>
+      <ThrottleValves>
+        <h2 id="throttle-valves">Throttle Valves</h2>
+        <ThrottleValveDesign>
+          <DesignIntent>
+            <ul>
+              {throttleDesignIntent}
+            </ul>
+          </DesignIntent>
+          <CaptionedImage img={ThrottleValvesImg1} caption="Current Throttle Valve Design" />
+        </ThrottleValveDesign>
+      </ThrottleValves>
     </Root>
   );
 }
