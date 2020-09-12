@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 // Components
 import Home from "./Home";
 import POC1 from "./routes/POC1";
+import KNDX1 from "./routes/KNDX1";
 import About from "./routes/About";
 import Sidebar from "./Sidebar";
 import Breadcrumbs from "./Breadcrumbs";
@@ -41,6 +42,9 @@ const App = () => {
           </Route>
           <Route path="/engines/liquid-propellant/poc-1">
             <POC1 engineSpecs={text.poc1.engineSpecs} />
+          </Route>
+          <Route path="/engines/solid-propellant/kndx-1">
+            <KNDX1 />
           </Route>
           <Route path="/about">
             <About />

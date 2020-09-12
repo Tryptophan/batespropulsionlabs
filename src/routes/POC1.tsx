@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
 import ImageGallery from 'react-image-gallery';
+import { Overview, Engine, Blocks, Summary, EngineSpecs, Specs, Block } from "./styles";
 
 // Text
 import text from "../text.json";
@@ -113,54 +114,11 @@ const Root = styled.div`
   padding-top: 20px;
 `;
 
-const Overview = styled.div`
-`;
-
-const Engine = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const Block = styled.div`
-  width: 30%;
-  background-color: #33373f;
-  padding: 20px;
-  border-left: 10px solid #282c34;
-  color: white;
-  height: fit-content;
-`;
-
-const Blocks = styled.div`
-  display: flex;
-  justify-content: space-around;
-`;
-
-const EngineSpecs = styled(Block)`
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-`;
-
-const Specs = styled.div`
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  ul:first-child {
-    font-weight: bold;
-    margin-right: 20px;
-  }
-`;
-
 const Videos = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
-`;
-
-const Summary = styled(Block)`
 `;
 
 const EngineAssembly = styled.div`

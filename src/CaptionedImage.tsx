@@ -25,7 +25,7 @@ const Root = styled.div`
     padding: 10px;
     background-color:rgba(0, 0, 0, 0.25);
     color: white;
-    width: 100%;
+    width: calc(100% - 20px);
   }
   :hover {
     span {

@@ -72,6 +72,51 @@
       ]
     }
   },
+  "kndx1": {
+    "engineSpecs": [
+      {
+        "title": "Thrust",
+        "spec": "~18 lbf"
+      },
+      {
+        "title": "Fuel",
+        "spec": "Dextrose"
+      },
+      {
+        "title": "Oxidizer",
+        "spec": "Potassium Nitrate"
+      },
+      {
+        "title": "O/F",
+        "spec": "1.85"
+      },
+      {
+        "title": "Throat Diameter",
+        "spec": "0.332"
+      },
+      {
+        "title": "Vehicle",
+        "spec": "Vertical Integrator"
+      }
+    ],
+    "summary1": "This engine has its roots in practicing aluminum fuel tank welds, I had been welding some simple test vessels to hydro statically test and realized I could probably turn them into rocket engines. So I did a lot of reading on Richard Nakka's excellent rocket website ",
+    "summary2": " and got to work designing my own solid rocket engine. I would not recommend using aluminum for an engine you want to fire many times. However, only having a small G0765 Grizzly 7\" x 14\" Mini lathe, steel turning was outside my capabilities. Aluminum is easy and fast to machine but will erode with multiple firings.",
+    "staticFire1": "In this static fire the engine performed far lower than analytically predicted by METEOR, and took far to long to come up to full thrust. We addressed this by incrasing the amount of black powder in the ignitor, adding slits to the side of the straw ignitor and hot gluing the throat of the engine. This allowed pressure to build in the chamber and combustion to spread before the ignitor was ejected.",
+    "staticFire2": "The second static fire demonstrated much better ramp up time with the new ignitor. The exterior of the engine was also machined down for weight savings. Unfortunately the thrust tester was not zip tied to the test stand and thus no thrust curve was able to be generated with the new ignitor design, and the next test was the maiden flight of the Vertical Integrator.",
+    "throatErosion": "As expected after multiple firings the aluminum throat started to erode. So while aluminum engines are easy to make they don't last many firings. This issues was likely exasperated by the step on the inside of the throat. Due to poor machining of the nozzle by the author instead of a the cones meeting at a smooth point, the converging nozzle hits a flat with a thin sharp wall to the expanding nozzle on the other side. This also explains the lower than expected performance.",
+    "propellantManufacturing": {
+      "summary": "We primarily followed the procedure outlined on Richard Nakka's site: ",
+      "step1": "Dextrose was ground in the mortar pestle then baked for an hour in the oven at 175F for 1 hour to remove the water content.",
+      "step2": "While Stump remover was run through a coarse sieve to remove chunks and then ground in mortar pestle.",
+      "step3": "After baking the dextrose will form chunks and needs to be ground back to a powder with a mortar pestle.",
+      "step4": "The ratios can then be confirmed, an extra 9% of dextrose needs to be put in the oven to account for the water being baked out. Final ratio should be 65% Potassium Nitrate and 35% Dextrose for optimal performance. This mix needs to be  thoroughly mixed, for this we used a protein shake bottle with mixer ball.",
+      "step5": "We then heated a skillet to 135-145C on an electric stove, using a heat gun and constant tuning of the heat setting. Propellant was added steadily added as existing propellant melted stirring until all propellant was added and mixed. Unlike Nakka we were able to get a very pourable mixture.",
+      "step6": "Propellant was poured into 3D printed molds. PLA was not a good choice for the center post as it softened and tilted as propellant was poured. It was later replaced with a partial threaded rod from McMaster. Due to the stickiness of the propellant and the roughness of 3D prints the upper section of the mold was simply removed with a hacksaw after the propellant was allowed to dry.",
+      "step7": "Propellant is then ready to be loaded into the engine or stored in an air tight container.",
+      "step8": "If there are issues with in fitting into the engine (such as too much penetration on the weld) we found an effective strategy to get the propellant is was to plug the nozzle with plastic wrap with a few layers then dunk in boiling water. The propellant can then easily be squeezed in.",
+      "step9": "To aid combustion speed in our second batch we poured black powder through the center bore of the propellant grain."
+    }
+  },
   "about": [
     {
       "name": "Eddie Bates",

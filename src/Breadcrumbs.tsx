@@ -30,6 +30,9 @@ const Root = styled.div`
     margin: 0px;
   }
   padding-top: 20px;
+  a {
+    color: #282c34;
+  }
 `;
 
 const Crumb = styled.span`
