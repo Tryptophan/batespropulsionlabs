@@ -40,6 +40,10 @@
       "coolingInsert": "For our cooling insert due to the complex geometry we used a SLA printed Nylon we got discounted from GoProto. This made it far cheaper than going with a machined part and works well since the part is low load and isn't in too high of a temperature environment. The parts used brass inserts installed with a soldering iron mounted to a drill press and laser cut gasket.",
       "edmFilmCoolingOrifices": "In-order for the throat not to melt regen cooled engines gernally require film cooling just upstream of the throat. This requires injecting fuel/coolant from the regen system into the chamber at a known flow rate. If too much is injected it won't get combusted and will lower ISP, too little and the engine melts. We optimally would have had 0.010\" holes but the smallest we could get were 8x 0.015\" holes. To make holes this small especially at crazy angles usually requires EDM. We used Applegate EDM and it cost us $500 for the 8 holes (more than we paid for the chamber it's self).",
       "postStaticFire": "WWII era relic recovery (i.e. Post static fire + 1 month marinade inspection)"
+    },
+    "daq": {
+      "hardware": "We initially started with an Arduino to control our stand and quickly reached its limits and moved to an ARM board. This allowed us to have dedicated much higher precision  ADC (analog-to-digital) converter. To achieve a 1khz data rate on all our sensors with 12 bit values ended up being pretty challenging, I wouldn't recommend it without a strong electrical engineer on the team. It's an order of magnitude more challenging than an Arduino project like the vertical integrator avionics.",
+      "groundStation": "If you want a high data rate, don't make a GUI in MATLAB it's far too slow. At 1kHz data rate the serial read method takes half the cycle time."
     }
   }
 }

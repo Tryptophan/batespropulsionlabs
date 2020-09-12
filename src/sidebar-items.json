@@ -20,10 +20,6 @@
                 "link": "/engines/liquid-propellant/poc-1#engine-assembly"
               },
               {
-                "name": "Test Stand",
-                "link": "/engines/liquid-propellant/poc-1#test-stand"
-              },
-              {
                 "name": "DAQ",
                 "link": "/engines/liquid-propellant/poc-1#daq"
               },

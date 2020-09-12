@@ -55,6 +55,13 @@ import EngineAssemblyImg32 from "../assets/poc1-engine-assembly/engine-assembly-
 import EngineAssemblyImg33 from "../assets/poc1-engine-assembly/engine-assembly-33.jpg";
 import EngineAssemblyImg34 from "../assets/poc1-engine-assembly/engine-assembly-34.jpg";
 
+// DAQ Images
+import DAQImg1 from "../assets/poc1-daq/daq-1.jpg";
+import DAQImg2 from "../assets/poc1-daq/daq-2.jpg";
+import DAQImg3 from "../assets/poc1-daq/daq-3.jpg";
+import DAQImg4 from "../assets/poc1-daq/daq-4.png";
+import DAQImg5 from "../assets/poc1-daq/daq-5.png";
+
 // Components
 import CaptionedImage from "../CaptionedImage";
 
@@ -137,7 +144,7 @@ const EngineAssembly = styled.div`
 
 const ComparedImages = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 40px;
 `;
 
@@ -150,6 +157,15 @@ const Gallery = styled.div`
   p {
     text-align: center;
   }
+`;
+
+const DAQ = styled.div``;
+
+const GroundStationImages = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  height: 450px;
 `;
 
 const POC1 = (props: POC1Props) => {
@@ -304,6 +320,21 @@ const POC1 = (props: POC1Props) => {
     }
   ];
 
+  let daqHardware = [
+    {
+      original: DAQImg1,
+      thumbnail: DAQImg1
+    },
+    {
+      original: DAQImg2,
+      thumbnail: DAQImg2
+    },
+    {
+      original: DAQImg3,
+      thumbnail: DAQImg3
+    },
+  ];
+
   return (
     <Root>
       <Overview>
@@ -332,7 +363,7 @@ const POC1 = (props: POC1Props) => {
         </Videos>
       </Overview>
       <EngineAssembly>
-        <h2 id="#engine-assembly">Engine Assembly</h2>
+        <h2 id="engine-assembly">Engine Assembly</h2>
         <p>{text.poc1.engineAssembly.summary}</p>
         <ComparedImages>
           <CaptionedImage img={EngineAssemblyImg1} caption="Combustion Chamber pre-polishing" />
@@ -378,6 +409,18 @@ const POC1 = (props: POC1Props) => {
           <CaptionedImage img={EngineAssemblyImg34} caption="After many, many hours of sanding" />
         </ComparedImages>
       </EngineAssembly>
+      <DAQ>
+        <h2 id="daq">DAQ (Data Acquisition)</h2>
+        <h3>Hardware</h3>
+        <p>{text.poc1.daq.hardware}</p>
+        <ImageGallery showPlayButton={false} items={daqHardware} />
+        <h3>Ground Station</h3>
+        <p>{text.poc1.daq.groundStation}</p>
+        <GroundStationImages>
+          <CaptionedImage img={DAQImg4} caption="MatLab GUI" />
+          <CaptionedImage img={DAQImg5} caption="Master Control Panel" />
+        </GroundStationImages>
+      </DAQ>
     </Root>
   );
 }
