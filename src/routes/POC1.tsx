@@ -62,6 +62,27 @@ import DAQImg3 from "../assets/poc1-daq/daq-3.jpg";
 import DAQImg4 from "../assets/poc1-daq/daq-4.png";
 import DAQImg5 from "../assets/poc1-daq/daq-5.png";
 
+// Pneumatic Valves Images
+// Design 1
+import PneumaticValvesImg1 from "../assets/poc1-pneumatic-valves/pneumatic-valves-1.jpg";
+import PneumaticValvesImg2 from "../assets/poc1-pneumatic-valves/pneumatic-valves-2.jpg";
+import PneumaticValvesImg3 from "../assets/poc1-pneumatic-valves/pneumatic-valves-3.jpg";
+// Design 2
+import PneumaticValvesImg4 from "../assets/poc1-pneumatic-valves/pneumatic-valves-4.jpg";
+import PneumaticValvesImg5 from "../assets/poc1-pneumatic-valves/pneumatic-valves-5.jpg";
+import PneumaticValvesImg6 from "../assets/poc1-pneumatic-valves/pneumatic-valves-6.jpg";
+// Valve Mounts
+import PneumaticValvesImg7 from "../assets/poc1-pneumatic-valves/pneumatic-valves-7.jpg";
+import PneumaticValvesImg8 from "../assets/poc1-pneumatic-valves/pneumatic-valves-8.jpg";
+import PneumaticValvesImg9 from "../assets/poc1-pneumatic-valves/pneumatic-valves-9.png";
+import PneumaticValvesImg10 from "../assets/poc1-pneumatic-valves/pneumatic-valves-10.jpg";
+import PneumaticValvesImg11 from "../assets/poc1-pneumatic-valves/pneumatic-valves-11.jpg";
+import PneumaticValvesImg12 from "../assets/poc1-pneumatic-valves/pneumatic-valves-12.jpg";
+// Final Product
+import PneumaticValvesImg13 from "../assets/poc1-pneumatic-valves/pneumatic-valves-13.jpg";
+import PneumaticValvesImg14 from "../assets/poc1-pneumatic-valves/pneumatic-valves-14.jpg";
+import PneumaticValvesImg15 from "../assets/poc1-pneumatic-valves/pneumatic-valves-15.jpg";
+
 // Components
 import CaptionedImage from "../CaptionedImage";
 
@@ -167,6 +188,18 @@ const GroundStationImages = styled.div`
   margin-bottom: 40px;
   height: 450px;
 `;
+
+const DesignIntent = styled(Block)`
+  ul {
+    list-style-type: decimal;
+  }
+`;
+
+const AlphaList = styled.ul`
+  list-style-type: lower-alpha;
+`;
+
+const PneumaticValves = styled.div``;
 
 const POC1 = (props: POC1Props) => {
   const titles = props.engineSpecs.map(item => (
@@ -332,8 +365,88 @@ const POC1 = (props: POC1Props) => {
     {
       original: DAQImg3,
       thumbnail: DAQImg3
-    },
+    }
   ];
+
+  let pneumaticValvesDesign1 = [
+    {
+      original: PneumaticValvesImg1,
+      thumbnail: PneumaticValvesImg1
+    },
+    {
+      original: PneumaticValvesImg2,
+      thumbnail: PneumaticValvesImg2
+    },
+    {
+      original: PneumaticValvesImg3,
+      thumbnail: PneumaticValvesImg3
+    }
+  ];
+
+  let pneumaticValvesDesign2 = [
+    {
+      original: PneumaticValvesImg4,
+      thumbnail: PneumaticValvesImg4
+    },
+    {
+      original: PneumaticValvesImg5,
+      thumbnail: PneumaticValvesImg5
+    },
+    {
+      original: PneumaticValvesImg6,
+      thumbnail: PneumaticValvesImg6
+    }
+  ];
+
+  let pneumaticValveMounts = [
+    {
+      original: PneumaticValvesImg7,
+      thumbnail: PneumaticValvesImg7
+    },
+    {
+      original: PneumaticValvesImg8,
+      thumbnail: PneumaticValvesImg8
+    },
+    {
+      original: PneumaticValvesImg9,
+      thumbnail: PneumaticValvesImg9
+    },
+    {
+      original: PneumaticValvesImg10,
+      thumbnail: PneumaticValvesImg10
+    },
+    {
+      original: PneumaticValvesImg11,
+      thumbnail: PneumaticValvesImg11
+    },
+    {
+      original: PneumaticValvesImg12,
+      thumbnail: PneumaticValvesImg12
+    }
+  ];
+
+  let pneumaticValvesFinalProduct = [
+    {
+      original: PneumaticValvesImg13,
+      thumbnail: PneumaticValvesImg13
+    },
+    {
+      original: PneumaticValvesImg14,
+      thumbnail: PneumaticValvesImg14
+    },
+    {
+      original: PneumaticValvesImg15,
+      thumbnail: PneumaticValvesImg15
+    }
+  ]
+
+  let designIntent = text.poc1.pneumaticValves.designIntent.map((intent, index) => (
+    <li key={index}>{intent}</li>
+  ));
+
+  let design2List = text.poc1.pneumaticValves.design2.parts.map((part, index) => (
+    <li key={index}>{part}</li>
+  ));
 
   return (
     <Root>
@@ -421,6 +534,36 @@ const POC1 = (props: POC1Props) => {
           <CaptionedImage img={DAQImg5} caption="Master Control Panel" />
         </GroundStationImages>
       </DAQ>
+      <PneumaticValves>
+        <h2 id="pnuematic-valves">Pneumatic Valves</h2>
+        <DesignIntent>
+          <h3>Design Intent</h3>
+          <ul>
+            {designIntent}
+          </ul>
+        </DesignIntent>
+        <h3>Design 1</h3>
+        <p>{text.poc1.pneumaticValves.design1}</p>
+        <ImageGallery showPlayButton={false} items={pneumaticValvesDesign1} />
+        <h3>Design 2</h3>
+        <p>{text.poc1.pneumaticValves.design2.summary}</p>
+        <AlphaList>
+          {design2List}
+        </AlphaList>
+        <ImageGallery showPlayButton={false} items={pneumaticValvesDesign2} />
+        <h4>Testing</h4>
+        <p>{text.poc1.pneumaticValves.design2.testing}</p>
+        <Videos>
+          <ReactPlayer url="https://www.youtube.com/watch?v=GEod86Dksuo" controls={true} />
+          <ReactPlayer url="https://www.youtube.com/watch?v=xnHX11NeHQ0" controls={true} />
+        </Videos>
+        <h3>Valve Mounts</h3>
+        <p>{text.poc1.pneumaticValves.valveMounts}</p>
+        <ImageGallery showPlayButton={false} items={pneumaticValveMounts} />
+        <h3>Final Product</h3>
+        <p>{text.poc1.pneumaticValves.finalProduct}</p>
+        <ImageGallery showPlayButton={false} items={pneumaticValvesFinalProduct} />
+      </PneumaticValves>
     </Root>
   );
 }
