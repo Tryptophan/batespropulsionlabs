@@ -64,17 +64,22 @@ import DAQImg4 from "../assets/poc1-daq/daq-4.png";
 import DAQImg5 from "../assets/poc1-daq/daq-5.png";
 
 // Pneumatic Valves Images
+// Early Development
+import PVEarlyImg1 from "../assets/poc1-pneumatic-valves/pv-early-1.jpg";
+import PVEarlyImg2 from "../assets/poc1-pneumatic-valves/pv-early-2.jpg";
 // Design 1
 import PneumaticValvesImg1 from "../assets/poc1-pneumatic-valves/pneumatic-valves-1.jpg";
 import PneumaticValvesImg2 from "../assets/poc1-pneumatic-valves/pneumatic-valves-2.jpg";
-import PneumaticValvesImg3 from "../assets/poc1-pneumatic-valves/pneumatic-valves-3.jpg";
+import PneumaticValvesImg3 from "../assets/poc1-pneumatic-valves/pneumatic-valves-3.png";
 // Design 2
+import PVDesign2Img1 from "../assets/poc1-pneumatic-valves/pv-design2-1.jpg";
 import PneumaticValvesImg4 from "../assets/poc1-pneumatic-valves/pneumatic-valves-4.jpg";
 import PneumaticValvesImg5 from "../assets/poc1-pneumatic-valves/pneumatic-valves-5.jpg";
-import PneumaticValvesImg6 from "../assets/poc1-pneumatic-valves/pneumatic-valves-6.jpg";
 // Valve Mounts
+import PVMountsImg1 from "../assets/poc1-pneumatic-valves/pv-mounts-1.jpg";
 import PneumaticValvesImg7 from "../assets/poc1-pneumatic-valves/pneumatic-valves-7.jpg";
 import PneumaticValvesImg8 from "../assets/poc1-pneumatic-valves/pneumatic-valves-8.jpg";
+//
 import PneumaticValvesImg9 from "../assets/poc1-pneumatic-valves/pneumatic-valves-9.png";
 import PneumaticValvesImg10 from "../assets/poc1-pneumatic-valves/pneumatic-valves-10.jpg";
 import PneumaticValvesImg11 from "../assets/poc1-pneumatic-valves/pneumatic-valves-11.jpg";
@@ -128,10 +133,6 @@ const DesignIntent = styled(Block)`
   ul {
     list-style-type: decimal;
   }
-`;
-
-const AlphaList = styled.ul`
-  list-style-type: lower-alpha;
 `;
 
 const PneumaticValves = styled.div``;
@@ -328,20 +329,24 @@ const POC1 = (props: POC1Props) => {
 
   let pneumaticValvesDesign2 = [
     {
+      original: PVDesign2Img1,
+      thumbnail: PVDesign2Img1
+    },
+    {
       original: PneumaticValvesImg4,
       thumbnail: PneumaticValvesImg4
     },
     {
       original: PneumaticValvesImg5,
       thumbnail: PneumaticValvesImg5
-    },
-    {
-      original: PneumaticValvesImg6,
-      thumbnail: PneumaticValvesImg6
     }
   ];
 
   let pneumaticValveMounts = [
+    {
+      original: PVMountsImg1,
+      thumbnail: PVMountsImg1
+    },
     {
       original: PneumaticValvesImg7,
       thumbnail: PneumaticValvesImg7
@@ -349,7 +354,10 @@ const POC1 = (props: POC1Props) => {
     {
       original: PneumaticValvesImg8,
       thumbnail: PneumaticValvesImg8
-    },
+    }
+  ];
+
+  let pvMounts2 = [
     {
       original: PneumaticValvesImg9,
       thumbnail: PneumaticValvesImg9
@@ -385,10 +393,6 @@ const POC1 = (props: POC1Props) => {
 
   let pneumaticDesignIntent = text.poc1.pneumaticValves.designIntent.map((intent, index) => (
     <li key={index}>{intent}</li>
-  ));
-
-  let design2List = text.poc1.pneumaticValves.design2.parts.map((part, index) => (
-    <li key={index}>{part}</li>
   ));
 
   let throttleDesignIntent = text.poc1.throttleValves.designIntent.map((intent, index) => (
@@ -489,14 +493,16 @@ const POC1 = (props: POC1Props) => {
             {pneumaticDesignIntent}
           </ul>
         </DesignIntent>
+        <p>{text.poc1.pneumaticValves.earlyDevelopment}</p>
+        <CaptionedImages>
+          <CaptionedImage img={PVEarlyImg1} caption="Valve" />
+          <CaptionedImage img={PVEarlyImg2} caption="Pneumatic Cylinder" />
+        </CaptionedImages>
         <h3>Design 1</h3>
         <p>{text.poc1.pneumaticValves.design1}</p>
         <ImageGallery showPlayButton={false} items={pneumaticValvesDesign1} />
         <h3>Design 2</h3>
         <p>{text.poc1.pneumaticValves.design2.summary}</p>
-        <AlphaList>
-          {design2List}
-        </AlphaList>
         <ImageGallery showPlayButton={false} items={pneumaticValvesDesign2} />
         <h4>Testing</h4>
         <p>{text.poc1.pneumaticValves.design2.testing}</p>
@@ -504,12 +510,16 @@ const POC1 = (props: POC1Props) => {
           <ReactPlayer url="https://www.youtube.com/watch?v=GEod86Dksuo" controls={true} />
           <ReactPlayer url="https://www.youtube.com/watch?v=xnHX11NeHQ0" controls={true} />
         </Videos>
+        <p>{text.poc1.pneumaticValves.design2.afterTesting}</p>
         <h3>Valve Mounts</h3>
         <p>{text.poc1.pneumaticValves.valveMounts}</p>
         <ImageGallery showPlayButton={false} items={pneumaticValveMounts} />
+        <p>{text.poc1.pneumaticValves.valveMounts2}</p>
+        <ImageGallery showPlayButton={false} items={pvMounts2} />
         <h3>Final Product</h3>
-        <p>{text.poc1.pneumaticValves.finalProduct}</p>
         <ImageGallery showPlayButton={false} items={pneumaticValvesFinalProduct} />
+        <h4>Valve Actuation Testing (All Valves)</h4>
+        <ReactPlayer url="https://youtu.be/jxv6eSGMJCA" controls={true} />
       </PneumaticValves>
       <ThrottleValves>
         <h2 id="throttle-valves">Throttle Valves</h2>
