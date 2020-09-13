@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52de3caa2a461c3c271cb82dd874670b",
+    "revision": "f40fb46a989ef216033072a89e8ac824",
     "url": "/batespropulsionlabs/index.html"
   },
   {
-    "revision": "50adabbec3a9360ce591",
+    "revision": "98e5f9c4ecec257f8385",
     "url": "/batespropulsionlabs/static/css/2.40a775a0.chunk.css"
   },
   {
-    "revision": "8de73b3f3425a6135181",
+    "revision": "c9c5d3f19ba188e37158",
     "url": "/batespropulsionlabs/static/css/main.fddfe593.chunk.css"
   },
   {
-    "revision": "50adabbec3a9360ce591",
-    "url": "/batespropulsionlabs/static/js/2.60575d3c.chunk.js"
+    "revision": "98e5f9c4ecec257f8385",
+    "url": "/batespropulsionlabs/static/js/2.deda29ac.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/batespropulsionlabs/static/js/2.60575d3c.chunk.js.LICENSE.txt"
+    "url": "/batespropulsionlabs/static/js/2.deda29ac.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8de73b3f3425a6135181",
-    "url": "/batespropulsionlabs/static/js/main.2025de14.chunk.js"
+    "revision": "c9c5d3f19ba188e37158",
+    "url": "/batespropulsionlabs/static/js/main.dd5c2bbb.chunk.js"
   },
   {
     "revision": "d9a9760255e1eb2fbeb3",
@@ -302,6 +302,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b07d886d5a3a21dd67b6233a603e903a",
     "url": "/batespropulsionlabs/static/media/nitrous-oxide.b07d886d.jpg"
+  },
+  {
+    "revision": "7d8597d142a8d25166e453603d1feb92",
+    "url": "/batespropulsionlabs/static/media/para-build-1.7d8597d1.jpg"
+  },
+  {
+    "revision": "a310b93bce4f7130c30d2efab378697a",
+    "url": "/batespropulsionlabs/static/media/para-build-2.a310b93b.jpg"
   },
   {
     "revision": "0c141ec369a71152d54fe1acd0ea392f",
