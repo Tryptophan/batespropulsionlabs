@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Types
 type Item = {
@@ -19,11 +19,9 @@ const Root = styled.li`
     cursor: pointer;
   }
   font-size: 14px;
-`;
-
-const Link = styled.span`
-  :hover {
-    text-decoration: underline;
+  a {
+    text-decoration: none;
+    color: white;
   }
 `;
 
@@ -52,56 +50,85 @@ const SidebarItems = styled.ul`
 `;
 
 const SidebarItem = (props: SidebarItemProps) => {
-  const history = useHistory();
   const [collapsed, toggle] = useState(true);
 
-  if (collapsed) {
-    return (
-      <Root>
-        <ItemComp onClick={(e) => {
-          if (props.item.children) {
-            e.stopPropagation();
-            toggle(!collapsed);
-          }
-        }}>
-          <Link onClick={() => history.push(props.item.link!)}>
-            {props.item.name}
+  if (!props.item.children) {
+    if (props.item.link.includes("#")) {
+      return (
+        <Root>
+            <a href={props.item.link}>
+            <ItemComp onClick={(e) => {
+              if (props.item.children) {
+                e.stopPropagation();
+                toggle(!collapsed);
+              }
+            }}>
+              {props.item.name}
+            </ItemComp>
+          </a>
+        </Root>
+      );
+    } else {
+      return (
+        <Root>
+            <Link to={props.item.link}>
+            <ItemComp onClick={(e) => {
+              if (props.item.children) {
+                e.stopPropagation();
+                toggle(!collapsed);
+              }
+            }}>
+              {props.item.name}
+            </ItemComp>
           </Link>
-          { props.item.children ?
-            <Arrow>&#9660;</Arrow>
-            : null
-          }
-        </ItemComp>
-      </Root>
-    );
+        </Root>
+      );
+    }
   } else {
-    const items = props.item.children && props.item.children.map((item) => (
-      <SidebarItem item={item} />
-    ));
-    return (
-      <Root>
-        <ItemComp onClick={(e) => {
-          if (props.item.children) {
-            e.stopPropagation();
-            toggle(!collapsed);
-          }
-        }}>
-          <Link onClick={() => history.push(props.item.link!)}>
+    if (collapsed) {
+      return (
+        <Root>
+          <ItemComp onClick={(e) => {
+            if (props.item.children) {
+              e.stopPropagation();
+              toggle(!collapsed);
+            }
+          }}>
             {props.item.name}
-          </Link>
+            { props.item.children ?
+              <Arrow>&#9660;</Arrow>
+              : null
+            }
+          </ItemComp>
+        </Root>
+      );
+    } else {
+      const items = props.item.children && props.item.children.map((item, index) => (
+        <SidebarItem key={index} item={item} />
+      ));
+      return (
+        <Root>
+          <ItemComp onClick={(e) => {
+            if (props.item.children) {
+              e.stopPropagation();
+              toggle(!collapsed);
+            }
+          }}>
+            {props.item.name}
+            { props.item.children ?
+              <Arrow>&#9650;</Arrow>
+              : null
+            }
+          </ItemComp>
           { props.item.children ?
-            <Arrow>&#9650;</Arrow>
+            <SidebarItems>
+              {items}
+            </SidebarItems>
             : null
           }
-        </ItemComp>
-        { props.item.children ?
-          <SidebarItems>
-            {items}
-          </SidebarItems>
-          : null
-        }
-      </Root>
-    );
+        </Root>
+      );
+    }
   }
 }
 
