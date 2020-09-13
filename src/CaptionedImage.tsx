@@ -26,6 +26,7 @@ const CaptionedImage = (props: CaptionedImageProps) => {
       background-color:rgba(0, 0, 0, 0.25);
       color: white;
       width: calc(100% - 20px);
+      border-radius: 5px 5px 0 0;
     }
     :hover {
       span {

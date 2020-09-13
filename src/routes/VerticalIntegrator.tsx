@@ -91,7 +91,7 @@ const KNDX1 = () => {
           <CaptionedImage img={Board1Img} caption="Avionics Board (Front)" />
           <CaptionedImage img={Board2Img} caption="Avionics Board (Back)" />
         </CaptionedImages>
-        <CaptionedImage img={BoardPricingImg} caption="Total Pricing" />
+        <CaptionedImage img={BoardPricingImg} caption="Pricing Breakdown" />
       </Avionics>
     </Root>
   );

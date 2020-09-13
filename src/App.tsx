@@ -26,11 +26,16 @@ const Root = styled.div`
 // const IndexPage = () => {
 // }
 
-const ScrollToTop = () => {
+const ScrollTo = () => {
   const location = useLocation();
   useEffect(() => {
     if (!location.hash) {
       window.scrollTo(0, 0)
+    } else {
+      const elm = document.getElementById(location.hash.substring(1));
+      if (elm) {
+        elm.scrollIntoView(true);
+      }
     }
   }, [location]);
 
@@ -53,23 +58,23 @@ const App = () => {
         </Switch>
         <Switch>
           <Route exact path="/">
-            <ScrollToTop />
+            <ScrollTo />
             <Home />
           </Route>
           <Route path="/engines/liquid-propellant/poc-1">
-            <ScrollToTop />
+            <ScrollTo />
             <POC1 engineSpecs={text.poc1.engineSpecs} />
           </Route>
           <Route path="/engines/solid-propellant/kndx-1">
-            <ScrollToTop />
+            <ScrollTo />
             <KNDX1 />
           </Route>
           <Route path="/vehicles/vertical-integrator">
-            <ScrollToTop />
+            <ScrollTo />
             <VerticalIntegrator />
           </Route>
           <Route path="/about">
-            <ScrollToTop />
+            <ScrollTo />
             <About />
           </Route>
           {/* <Route>

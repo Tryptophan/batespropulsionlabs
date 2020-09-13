@@ -53,37 +53,20 @@ const SidebarItem = (props: SidebarItemProps) => {
   const [collapsed, toggle] = useState(true);
 
   if (!props.item.children) {
-    if (props.item.link.includes("#")) {
-      return (
-        <Root>
-            <a href={props.item.link}>
-            <ItemComp onClick={(e) => {
-              if (props.item.children) {
-                e.stopPropagation();
-                toggle(!collapsed);
-              }
-            }}>
-              {props.item.name}
-            </ItemComp>
-          </a>
-        </Root>
-      );
-    } else {
-      return (
-        <Root>
-            <Link to={props.item.link}>
-            <ItemComp onClick={(e) => {
-              if (props.item.children) {
-                e.stopPropagation();
-                toggle(!collapsed);
-              }
-            }}>
-              {props.item.name}
-            </ItemComp>
-          </Link>
-        </Root>
-      );
-    }
+    return (
+      <Root>
+          <Link to={props.item.link}>
+          <ItemComp onClick={(e) => {
+            if (props.item.children) {
+              e.stopPropagation();
+              toggle(!collapsed);
+            }
+          }}>
+            {props.item.name}
+          </ItemComp>
+        </Link>
+      </Root>
+    );
   } else {
     if (collapsed) {
       return (
