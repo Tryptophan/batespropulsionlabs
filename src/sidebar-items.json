@@ -16,6 +16,10 @@
             "link": "/engines/liquid-propellant/poc-1",
             "children": [
               {
+                "name": "Overview",
+                "link": "/engines/liquid-propellant/poc-1"
+              },
+              {
                 "name": "Engine Assembly",
                 "link": "/engines/liquid-propellant/poc-1#engine-assembly"
               },
@@ -47,6 +51,10 @@
             "name": "KNDX-1",
             "link": "/engines/solid-propellant/kndx-1",
             "children": [
+              {
+                "name": "Overview",
+                "link": "/engines/solid-propellant/kndx-1"
+              },
               {
                 "name": "Propellant Manufacturing",
                 "link": "/engines/solid-propellant/kndx-1#propellant-manufacturing"

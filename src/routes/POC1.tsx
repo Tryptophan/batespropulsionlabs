@@ -508,7 +508,7 @@ const POC1 = (props: POC1Props) => {
         </GroundStationImages>
       </DAQ>
       <PneumaticValves>
-        <h2 id="pnuematic-valves">Pneumatic Valves</h2>
+        <h2 id="pneumatic-valves">Pneumatic Valves</h2>
         <DesignIntent>
           <h3>Design Intent</h3>
           <ul>

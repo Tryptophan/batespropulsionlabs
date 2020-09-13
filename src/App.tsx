@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, useLocation } from "react-router-dom";
 
 // Components
 import Home from "./Home";
@@ -24,6 +24,19 @@ const Root = styled.div`
 // const IndexPage = () => {
 // }
 
+const ScrollToTop = () => {
+  const location = useLocation();
+  useEffect(() => {
+    if (!location.hash) {
+      window.scrollTo(0, 0)
+    }
+  }, [location]);
+
+  return (
+    <React.Fragment />
+  );
+}
+
 const App = () => {
   return (
     <Root>
@@ -32,21 +45,25 @@ const App = () => {
         <Sidebar items={sidebarItems} />
         {/* Breadcrumbs, don't render on home or about */}
         <Switch>
-          <Route render={({location}) => {
+          <Route render={({ location }) => {
             return location.pathname !== "/" && location.pathname !== "/about" ? <Breadcrumbs /> : null;
           }} />
         </Switch>
         <Switch>
           <Route exact path="/">
+            <ScrollToTop />
             <Home />
           </Route>
           <Route path="/engines/liquid-propellant/poc-1">
+            <ScrollToTop />
             <POC1 engineSpecs={text.poc1.engineSpecs} />
           </Route>
           <Route path="/engines/solid-propellant/kndx-1">
+            <ScrollToTop />
             <KNDX1 />
           </Route>
           <Route path="/about">
+            <ScrollToTop />
             <About />
           </Route>
           {/* <Route>
