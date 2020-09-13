@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { BrowserRouter, Switch, Route, useLocation } from "react-router-dom";
+import { Link, BrowserRouter, Switch, Route, useLocation } from "react-router-dom";
+import { Root } from "./routes/styles";
 
 // Components
 import Home from "./Home";
@@ -20,12 +21,47 @@ import sidebarItems from "./sidebar-items.json";
 import text from "./text.json";
 
 // Styles
-const Root = styled.div`
+const AppRoot = styled.div`
 `;
 
+type SidebarItem = {
+  name: string,
+  link: string,
+  children?: SidebarItem[]
+}
+
 // No actual content on page, just indexes other pages with breadcrumbs
-// const IndexPage = () => {
-// }
+const IndexPage = () => {
+
+  // Get flat list of all sidebar items
+  const flatten = (items: SidebarItem[]) => {
+    return items.reduce((acc: SidebarItem[], curr: SidebarItem) => {
+      acc.push(curr);
+      if (curr.children) {
+        acc = acc.concat(flatten(curr.children));
+      }
+      return acc;
+    }, []);
+  }
+  const items: SidebarItem[] = flatten(sidebarItems);
+
+  const location = useLocation();
+  useEffect(() => {
+  }, [location]);
+
+  const item = items.find(item => location.pathname === item.link);
+  const links = item && item.children && item.children.map((child, index) => (
+    <div key={index}>
+      <Link to={child.link}>{child.name}</Link>
+    </div>
+  ));
+
+  return (
+    <Root>
+      {links}
+    </Root>
+  );
+}
 
 const ScrollTo = () => {
   const location = useLocation();
@@ -47,7 +83,7 @@ const ScrollTo = () => {
 
 const App = () => {
   return (
-    <Root>
+    <AppRoot>
       <BrowserRouter>
         {/* Sidebar navigation */}
         <Sidebar items={sidebarItems} />
@@ -82,12 +118,12 @@ const App = () => {
             <ScrollTo />
             <About />
           </Route>
-          {/* <Route>
+          <Route>
             <IndexPage />
-          </Route> */}
+          </Route>
         </Switch>
       </BrowserRouter>
-    </Root>
+    </AppRoot>
   );
 }
 
