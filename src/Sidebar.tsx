@@ -30,6 +30,9 @@ const Root = styled.div`
   > div {
     margin-bottom: 20px;
   }
+  @media (max-width: 1700px) {
+    width: 20%;
+  }
 `;
 
 const Collapsed = styled(Root)`
@@ -41,6 +44,9 @@ const Collapsed = styled(Root)`
   left: 10px;
   > div {
     margin-bottom: 0px;
+  }
+  @media (max-width: 1700px) {
+    width: auto;
   }
 `;
 
