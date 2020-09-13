@@ -9,6 +9,8 @@ import VerticalIntegratorImg from "../assets/solid-rocket.png";
 import AltitudeLogsImg from "../assets/vertical-integrator/alt.png";
 import AccelerationLogsImg from "../assets/vertical-integrator/acc.png";
 
+import ParaBuild1 from "../assets/vertical-integrator/para-build-1.jpg";
+import ParaBuild2 from "../assets/vertical-integrator/para-build-2.jpg";
 import ParachuteImg from "../assets/vertical-integrator/parachute.jpg";
 import GoresImg from "../assets/vertical-integrator/gores.jpg";
 import RecDepSysV1Img from "../assets/vertical-integrator/plungerv1.png";
@@ -63,12 +65,17 @@ const KNDX1 = () => {
       </Overview>
       <Recovery>
         <h2 id="recovery">Recovery</h2>
+        <p>{text.verticalIntegrator.recovery.summary}</p>
+        <CaptionedImages>
+          <CaptionedImage img={ParaBuild1} caption="Parachute Section" />
+          <CaptionedImage img={ParaBuild2} caption="Sam stitching the parachute sections together" />
+        </CaptionedImages>
 
         <p>{text.verticalIntegrator.recovery.parachute}</p>
         <p>{text.verticalIntegrator.recovery.gores}</p>
 
         <CaptionedImages>
-          <CaptionedImage img={ParachuteImg} caption="Parachute" />
+          <CaptionedImage img={ParachuteImg} caption="Completed Parachute" />
           <CaptionedImage img={GoresImg} caption="Parachute Gores" />
         </CaptionedImages>
 
