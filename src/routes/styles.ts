@@ -20,6 +20,9 @@ export const Root = styled.div`
 `;
 
 export const Overview = styled.div`
+  img {
+    width: 50vw;
+  }
 `;
 
 export const Engine = styled.div`

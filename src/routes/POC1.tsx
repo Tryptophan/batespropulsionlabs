@@ -79,7 +79,7 @@ import PneumaticValvesImg5 from "../assets/poc1-pneumatic-valves/pneumatic-valve
 import PVMountsImg1 from "../assets/poc1-pneumatic-valves/pv-mounts-1.jpg";
 import PneumaticValvesImg7 from "../assets/poc1-pneumatic-valves/pneumatic-valves-7.jpg";
 import PneumaticValvesImg8 from "../assets/poc1-pneumatic-valves/pneumatic-valves-8.jpg";
-//
+// Valve Mounts 2
 import PneumaticValvesImg9 from "../assets/poc1-pneumatic-valves/pneumatic-valves-9.png";
 import PneumaticValvesImg10 from "../assets/poc1-pneumatic-valves/pneumatic-valves-10.jpg";
 import PneumaticValvesImg11 from "../assets/poc1-pneumatic-valves/pneumatic-valves-11.jpg";
@@ -405,7 +405,7 @@ const POC1 = (props: POC1Props) => {
         <h1>POC-1 Rocket Engine</h1>
         <h2>Overview</h2>
         <Engine>
-          <img src={POC1Img} alt="POC-1" />
+          <CaptionedImage img={POC1Img} caption="POC-1" />
           <Blocks>
             <Summary>
               <h3>Summary</h3>

@@ -5,6 +5,7 @@ import { Root, Overview, Engine, Blocks, Summary, EngineSpecs, Specs, CaptionedI
 import CaptionedImage from "../CaptionedImage";
 
 // Images
+import CADImg from "../assets/kndx1/cad.png";
 import KNDX1Img from "../assets/kndx1/kndx-1.jpg";
 import ThrustImg from "../assets/kndx1/kndx-1-thrust.png";
 import ThroatErosion1 from "../assets/kndx1/kndx-1-throat-fresh.jpg";
@@ -26,6 +27,10 @@ import PropellantManufacturing9 from "../assets/kndx1/propellant-manufacturing/9
 // Text
 import text from "../text.json";
 
+const StaticFire1 = styled.div`
+  display: flex;
+`;
+
 const PropellantManufacturing = styled.div``;
 
 const KNDX1 = () => {
@@ -43,7 +48,7 @@ const KNDX1 = () => {
         <h1>KNDX-1 Rocket Engine</h1>
         <h2>Overview</h2>
         <Engine>
-          <img src={KNDX1Img} alt="KNDX-1" />
+          <CaptionedImage img={CADImg} caption="KNDX-1" />
           <Blocks>
             <Summary>
               <h3>Summary</h3>
@@ -65,7 +70,10 @@ const KNDX1 = () => {
         <h2>Static Fire 1</h2>
         <ReactPlayer url="https://youtu.be/GNM-Xr77wUs" controls={true} />
         <p>{text.kndx1.staticFire1}</p>
-        <CaptionedImage img={ThrustImg} caption="KNDX-1 Thrust Analysis" />
+        <CaptionedImages>
+          <CaptionedImage img={ThrustImg} caption="KNDX-1 Thrust Analysis" />
+          <CaptionedImage img={KNDX1Img} caption="KNDX-1" />
+        </CaptionedImages>
 
         <h2>Static Fire 2</h2>
         <ReactPlayer url="https://youtu.be/zCNFceTv2Gs" controls={true} />
