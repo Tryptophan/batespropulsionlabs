@@ -74,16 +74,16 @@
         "link": "/vehicles/vertical-integrator",
         "children": [
           {
+            "name": "Overview",
+            "link": "/vehicles/vertical-integrator"
+          },
+          {
             "name": "Recovery",
             "link": "/vehicles/vertical-integrator#recovery"
           },
           {
             "name": "Avionics",
             "link": "/vehicles/vertical-integrator#avionics"
-          },
-          {
-            "name": "Flight 1",
-            "link": "/vehicles/vertical-integrator#flight-1"
           }
         ]
       }

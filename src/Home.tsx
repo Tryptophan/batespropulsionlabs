@@ -109,7 +109,7 @@ const Home = () => {
             </Link>
           </Project>
           <Project>
-            <Link onClick={() => history.push("/kndx-1")}>
+            <Link onClick={() => history.push("/vehicles/vertical-integrator")}>
               <h3>Vertical Integrator</h3>
               <img src={SolidRocket} alt="Solid Rocket"></img>
               <h3 className="ProjectFooter">Experimental Solid Rocket Test Platform</h3>

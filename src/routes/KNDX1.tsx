@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
-import { Overview, Engine, Blocks, Summary, EngineSpecs, Specs, CaptionedImages } from "./styles";
+import { Root, Overview, Engine, Blocks, Summary, EngineSpecs, Specs, CaptionedImages } from "./styles";
 import CaptionedImage from "../CaptionedImage";
 
 // Images
@@ -25,20 +25,6 @@ import PropellantManufacturing9 from "../assets/kndx1/propellant-manufacturing/9
 
 // Text
 import text from "../text.json";
-
-const Root = styled.div`
-  width: 70%;
-  margin: 0 auto;
-  img {
-    width: 80%;
-  }
-  h1 {
-    color: #282c34;
-    margin: 0px;
-  }
-  padding-top: 20px;
-  margin-bottom: 40px;
-`;
 
 const PropellantManufacturing = styled.div``;
 
@@ -91,9 +77,9 @@ const KNDX1 = () => {
           <CaptionedImage img={ThroatErosion2} caption="After 1st Static Fire" />
           <CaptionedImage img={ThroatErosion3} caption="After 2nd Firing" />
           <CaptionedImage img={ThroatErosion4} caption="After 1st Flight" />
+          <CaptionedImage img={ThroatErosion5} caption="New Machined Throat" />
         </CaptionedImages>
         <p>{text.kndx1.throatErosion}</p>
-        <CaptionedImage img={ThroatErosion5} caption="New Machined Throat" />
       </Overview>
 
       <PropellantManufacturing>

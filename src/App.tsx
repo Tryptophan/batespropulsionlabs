@@ -6,7 +6,9 @@ import { BrowserRouter, Switch, Route, useLocation } from "react-router-dom";
 import Home from "./Home";
 import POC1 from "./routes/POC1";
 import KNDX1 from "./routes/KNDX1";
+import VerticalIntegrator from "./routes/VerticalIntegrator";
 import About from "./routes/About";
+
 import Sidebar from "./Sidebar";
 import Breadcrumbs from "./Breadcrumbs";
 
@@ -61,6 +63,10 @@ const App = () => {
           <Route path="/engines/solid-propellant/kndx-1">
             <ScrollToTop />
             <KNDX1 />
+          </Route>
+          <Route path="/vehicles/vertical-integrator">
+            <ScrollToTop />
+            <VerticalIntegrator />
           </Route>
           <Route path="/about">
             <ScrollToTop />

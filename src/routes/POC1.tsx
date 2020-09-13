@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
 import ImageGallery from 'react-image-gallery';
-import { Overview, Engine, Blocks, Summary, EngineSpecs, Specs, Block } from "./styles";
+import { Root, Overview, Engine, Blocks, Summary, EngineSpecs, Specs, Block, CaptionedImages } from "./styles";
 
 // Text
 import text from "../text.json";
@@ -101,19 +101,6 @@ type EngineSpec = {
 }
 
 // Styles
-const Root = styled.div`
-  width: 70%;
-  margin: 0 auto;
-  img {
-    width: 80%;
-  }
-  h1 {
-    color: #282c34;
-    margin: 0px;
-  }
-  padding-top: 20px;
-`;
-
 const Videos = styled.div`
   display: flex;
   justify-content: space-between;
@@ -122,12 +109,6 @@ const Videos = styled.div`
 `;
 
 const EngineAssembly = styled.div`
-`;
-
-const ComparedImages = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 40px;
 `;
 
 const Galleries = styled.div`
@@ -142,13 +123,6 @@ const Gallery = styled.div`
 `;
 
 const DAQ = styled.div``;
-
-const GroundStationImages = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 40px;
-  height: 450px;
-`;
 
 const DesignIntent = styled(Block)`
   ul {
@@ -451,10 +425,10 @@ const POC1 = (props: POC1Props) => {
       <EngineAssembly>
         <h2 id="engine-assembly">Engine Assembly</h2>
         <p>{text.poc1.engineAssembly.summary}</p>
-        <ComparedImages>
+        <CaptionedImages>
           <CaptionedImage img={EngineAssemblyImg1} caption="Combustion Chamber pre-polishing" />
           <CaptionedImage img={EngineAssemblyImg2} caption="Combustion Chamber post-polishing" />
-        </ComparedImages>
+        </CaptionedImages>
         <h3>Combustion Chamber</h3>
         <p>{text.poc1.engineAssembly.combustionChamber}</p>
         <ImageGallery showPlayButton={false} items={injector} />
@@ -490,10 +464,10 @@ const POC1 = (props: POC1Props) => {
             <p>{text.poc1.engineAssembly.postStaticFire}</p>
           </Gallery>
         </Galleries>
-        <ComparedImages>
+        <CaptionedImages>
           <CaptionedImage img={EngineAssemblyImg33} caption="Pitting after initial cleaning" />
           <CaptionedImage img={EngineAssemblyImg34} caption="After many, many hours of sanding" />
-        </ComparedImages>
+        </CaptionedImages>
       </EngineAssembly>
       <DAQ>
         <h2 id="daq">DAQ (Data Acquisition)</h2>
@@ -502,10 +476,10 @@ const POC1 = (props: POC1Props) => {
         <ImageGallery showPlayButton={false} items={daqHardware} />
         <h3>Ground Station</h3>
         <p>{text.poc1.daq.groundStation}</p>
-        <GroundStationImages>
+        <CaptionedImages>
           <CaptionedImage img={DAQImg4} caption="MatLab GUI" />
           <CaptionedImage img={DAQImg5} caption="Master Control Panel" />
-        </GroundStationImages>
+        </CaptionedImages>
       </DAQ>
       <PneumaticValves>
         <h2 id="pneumatic-valves">Pneumatic Valves</h2>

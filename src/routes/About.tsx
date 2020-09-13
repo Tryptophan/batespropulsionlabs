@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Root } from "./styles";
 
 // Text
 import text from "../text.json";
@@ -26,20 +27,6 @@ const images = [
     url: Jacob
   }
 ];
-
-const Root = styled.div`
-  width: 70%;
-  margin: 0 auto;
-  img {
-    width: 80%;
-  }
-  h1 {
-    color: #282c34;
-    margin: 0px;
-  }
-  padding-top: 20px;
-  margin-bottom: 40px;
-`;
 
 const Bio = styled.div`
   div {

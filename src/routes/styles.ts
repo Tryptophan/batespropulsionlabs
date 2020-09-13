@@ -1,5 +1,21 @@
 import styled from "styled-components";
 
+export const Root = styled.div`
+  width: 70%;
+  margin: 0 auto;
+  img {
+    width: 80%;
+  }
+  h1, h2, h3, h4 {
+    color: #282c34;
+  }
+  h1 {
+    margin: 0px;
+  }
+  padding-top: 20px;
+  margin-bottom: 40px;
+`;
+
 export const Overview = styled.div`
 `;
 
@@ -49,5 +65,5 @@ export const Summary = styled(Block)`
 export const CaptionedImages = styled.div`
   display: flex;
   justify-content: space-between;
-  max-height: 500px;
+  gap: 20px;
 `;
