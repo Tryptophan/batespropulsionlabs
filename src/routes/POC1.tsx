@@ -116,17 +116,6 @@ const Videos = styled.div`
 const EngineAssembly = styled.div`
 `;
 
-const Galleries = styled.div`
-  display: flex;
-  gap: 40px;
-`;
-
-const Gallery = styled.div`
-  p {
-    text-align: center;
-  }
-`;
-
 const DAQ = styled.div``;
 
 const DesignIntent = styled(Block)`
@@ -436,16 +425,10 @@ const POC1 = (props: POC1Props) => {
         <h3>Combustion Chamber</h3>
         <p>{text.poc1.engineAssembly.combustionChamber}</p>
         <ImageGallery showPlayButton={false} items={injector} />
-        <Galleries>
-          <Gallery>
-            <h3>Assembly</h3>
-            <ImageGallery showPlayButton={false} items={assembly} />
-          </Gallery>
-          <Gallery>
-            <h3>Nickel Plating</h3>
-            <ImageGallery showPlayButton={false} items={nickelPlating} />
-          </Gallery>
-        </Galleries>
+        <h3>Assembly</h3>
+        <ImageGallery showPlayButton={false} items={assembly} />
+        <h3>Nickel Plating</h3>
+        <ImageGallery showPlayButton={false} items={nickelPlating} />
         <h3>Warm Fire</h3>
         <p>{text.poc1.engineAssembly.warmFire}</p>
         <ImageGallery showPlayButton={false} items={warmFire} />
@@ -459,15 +442,9 @@ const POC1 = (props: POC1Props) => {
         <ImageGallery showPlayButton={false} items={coolingInsert} />
         <h3>EDM Film Cooling Orifices</h3>
         <p>{text.poc1.engineAssembly.edmFilmCoolingOrifices}</p>
-        <Galleries>
-          <Gallery>
-            <ImageGallery showPlayButton={false} items={edmFilmCoolingOrifices} />
-          </Gallery>
-          <Gallery>
-            <ImageGallery showPlayButton={false} items={postStaticFire} />
-            <p>{text.poc1.engineAssembly.postStaticFire}</p>
-          </Gallery>
-        </Galleries>
+        <ImageGallery showPlayButton={false} items={edmFilmCoolingOrifices} />
+        <h4>{text.poc1.engineAssembly.postStaticFire}</h4>
+        <ImageGallery showPlayButton={false} items={postStaticFire} />
         <CaptionedImages>
           <CaptionedImage img={EngineAssemblyImg33} caption="Pitting after initial cleaning" />
           <CaptionedImage img={EngineAssemblyImg34} caption="After many, many hours of sanding" />
