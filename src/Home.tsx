@@ -9,7 +9,7 @@ import text from "./text.json";
 import HeaderBackground from "./assets/header.png";
 import POC1 from "./assets/poc-1.png";
 import SolidRocket from "./assets/solid-rocket.png";
-import HydrogenPeroxide from "./assets/hydrogen-peroxide.jpeg";
+import NitrousOxide from "./assets/nitrous-oxide.jpg";
 
 // Styles
 const Root = styled.div`
@@ -73,12 +73,12 @@ const Project = styled.div`
   img {
     width: auto;
     max-width: 10vw;
-    height: auto;
     max-height: 200px;
+    align-self: center;
   }
-`;
-
-const Link = styled.span`
+  h3:last-child {
+    align-self: end;
+  }
   :hover {
     text-decoration: underline;
     cursor: pointer;
@@ -101,23 +101,19 @@ const Home = () => {
         {/* Project links */}
         <ProjectsTitle><h2>Check out what we're building...</h2></ProjectsTitle>
         <Projects>
-          <Project>
-            <Link onClick={() => history.push("/engines/liquid-propellant/poc-1")}>
-              <h3>POC-1</h3>
-              <img src={POC1} alt="POC-1"></img>
-              <h3 className="ProjectFooter">Kerosene/Gaseous Oxygen</h3>
-            </Link>
+          <Project onClick={() => history.push("/engines/liquid-propellant/poc-1")}>
+            <h3>POC-1</h3>
+            <img src={POC1} alt="POC-1" />
+            <h3 className="ProjectFooter">Kerosene/Gaseous Oxygen</h3>
           </Project>
-          <Project>
-            <Link onClick={() => history.push("/vehicles/vertical-integrator")}>
-              <h3>Vertical Integrator</h3>
-              <img src={SolidRocket} alt="Solid Rocket"></img>
-              <h3 className="ProjectFooter">Experimental Solid Rocket Test Platform</h3>
-            </Link>
+          <Project onClick={() => history.push("/vehicles/vertical-integrator")}>
+            <h3>Vertical Integrator</h3>
+            <img src={SolidRocket} alt="Solid Rocket" />
+            <h3 className="ProjectFooter">Experimental Solid Rocket Test Platform</h3>
           </Project>
-          <Project>
-            <h3>Hydrogen Peroxide</h3>
-            <img src={HydrogenPeroxide} alt="Hydrogen Peroxide"></img>
+          <Project onClick={() => history.push("/engines/liquid-propellant/nitrous-oxide")}>
+            <h3>Nitrous Oxide</h3>
+            <img src={NitrousOxide} alt="Nitrous Oxide" />
             <h3 className="ProjectFooter">Our Current R&#38;D Propellant</h3>
           </Project>
         </Projects>

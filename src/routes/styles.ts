@@ -6,6 +6,9 @@ export const Root = styled.div`
   img {
     width: 80%;
   }
+  a {
+    color: black;
+  }
   h1, h2, h3, h4 {
     color: #282c34;
   }
@@ -31,6 +34,9 @@ export const Block = styled.div`
   border-left: 10px solid #282c34;
   color: white;
   height: fit-content;
+  h3 {
+    color: white;
+  }
   a {
     color: white;
   }

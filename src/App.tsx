@@ -7,6 +7,7 @@ import Home from "./Home";
 import POC1 from "./routes/POC1";
 import KNDX1 from "./routes/KNDX1";
 import VerticalIntegrator from "./routes/VerticalIntegrator";
+import NitrousOxide from "./routes/NitrousOxide";
 import About from "./routes/About";
 
 import Sidebar from "./Sidebar";
@@ -72,6 +73,10 @@ const App = () => {
           <Route path="/vehicles/vertical-integrator">
             <ScrollTo />
             <VerticalIntegrator />
+          </Route>
+          <Route path="/engines/liquid-propellant/nitrous-oxide">
+            <ScrollTo />
+            <NitrousOxide />
           </Route>
           <Route path="/about">
             <ScrollTo />
