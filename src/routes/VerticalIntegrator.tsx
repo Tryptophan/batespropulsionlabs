@@ -45,7 +45,7 @@ const KNDX1 = () => {
   return (
     <Root>
       <Overview>
-        <h1>Verical Integrator</h1>
+        <h1>Vertical Integrator</h1>
         <h2>Overview</h2>
         <ImageSummary>
           <CaptionedImage height="800px" img={VerticalIntegratorImg} caption="Vertical Integrator" />

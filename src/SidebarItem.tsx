@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 // Types
 type Item = {
@@ -24,6 +24,8 @@ const Root = styled.li`
     color: white;
   }
 `;
+
+const Link = styled.div``;
 
 const ItemComp = styled.div`
   display: flex;
@@ -51,64 +53,63 @@ const SidebarItems = styled.ul`
 
 const SidebarItem = (props: SidebarItemProps) => {
   const [collapsed, toggle] = useState(true);
+  const history = useHistory();
 
   if (!props.item.children) {
     return (
       <Root>
-          <Link to={props.item.link}>
-          <ItemComp onClick={(e) => {
-            if (props.item.children) {
-              e.stopPropagation();
-              toggle(!collapsed);
-            }
-          }}>
+        <Link onClick={() => history.push(props.item.link)}>
+          <ItemComp>
             {props.item.name}
           </ItemComp>
         </Link>
       </Root>
     );
   } else {
-    if (collapsed) {
-      return (
-        <Root>
-          <ItemComp onClick={(e) => {
-            if (props.item.children) {
-              e.stopPropagation();
-              toggle(!collapsed);
-            }
-          }}>
-            {props.item.name}
-            { props.item.children ?
-              <Arrow>&#9660;</Arrow>
-              : null
-            }
-          </ItemComp>
-        </Root>
-      );
-    } else {
+
+    // Check if any children also have children (single-deep item)
+    const linkDropdown = props.item.children.reduce((acc: boolean, curr: Item) => {
+      return acc && !curr.children;
+    }, true);
+
+    let children = null;
+    if (!collapsed) {
       const items = props.item.children && props.item.children.map((item, index) => (
         <SidebarItem key={index} item={item} />
       ));
+      children = (
+        <SidebarItems>
+          {items}
+        </SidebarItems>
+      );
+    }
+
+    const dropdown = (
+      <React.Fragment>
+        <ItemComp onClick={() => toggle(!collapsed)}>
+          {props.item.name}
+          {collapsed ?
+            <Arrow>&#9660;</Arrow> :
+            <Arrow>&#9650;</Arrow>
+          }
+        </ItemComp>
+      </React.Fragment>
+    );
+
+    if (linkDropdown) {
       return (
         <Root>
-          <ItemComp onClick={(e) => {
-            if (props.item.children) {
-              e.stopPropagation();
-              toggle(!collapsed);
-            }
-          }}>
-            {props.item.name}
-            { props.item.children ?
-              <Arrow>&#9650;</Arrow>
-              : null
-            }
-          </ItemComp>
-          { props.item.children ?
-            <SidebarItems>
-              {items}
-            </SidebarItems>
-            : null
-          }
+          <Link onClick={() => history.push(props.item.link)}>
+            {dropdown}
+          </Link>
+          {children}
+        </Root>
+      );
+    } else {
+      return (
+        <Root>
+          {dropdown}
+          {children}
         </Root>
       );
     }
