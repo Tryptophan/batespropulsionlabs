@@ -72,7 +72,10 @@ const Toggle = styled.div`
 `;
 
 const Sidebar = (props: SidebarProps) => {
-  const [collapsed, toggle] = useState(true);
+  
+  let startCollapsed = false;
+  if (window.innerWidth < 1360) startCollapsed = true;
+  const [collapsed, toggle] = useState(startCollapsed);
 
   if (collapsed) {
     return (
