@@ -28,11 +28,17 @@ const Header = styled.div`
   height: 60vh;
   color: white;
   display: flex;
-  align-items: end;
   justify-content: center;
   padding-bottom: 10vh;
   h1 {
+    margin-top: 50vh;
     font-size: 4em;
+  }
+
+  @media (max-width: 1360px) {
+    h1 {
+      font-size: 2em;
+    }
   }
 `;
 
@@ -45,6 +51,11 @@ const Description = styled.div`
   position: relative;
   top: -40px;
   color: white;
+
+  @media(max-width: 1360px) {
+    width: 80%;
+    margin: 0 auto;
+  }
 `;
 
 const ProjectsTitle = styled.div`
@@ -52,6 +63,10 @@ const ProjectsTitle = styled.div`
   margin: 0 auto auto 15%;
   width: 30%;
   margin-bottom: 60px;
+
+  @media(max-width: 1360px) {
+    width: auto;
+  }
 `;
 
 const Projects = styled.div`
@@ -62,6 +77,11 @@ const Projects = styled.div`
   width: 70%;
   margin-bottom: 10vh;
   color: #282c34;
+
+  @media(max-width: 1360px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Project = styled.div`
@@ -82,6 +102,12 @@ const Project = styled.div`
   :hover {
     text-decoration: underline;
     cursor: pointer;
+  }
+
+  @media(max-width: 1360px) {
+    img {
+      max-width: 40vw;
+    }
   }
 `;
 

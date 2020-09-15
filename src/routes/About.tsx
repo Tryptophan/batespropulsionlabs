@@ -32,6 +32,10 @@ const Bio = styled.div`
   div {
     display: flex;
     gap: 10px;
+
+    @media(max-width: 1360px) {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -46,6 +50,10 @@ const ImageWrapper = styled.div`
 
 const Details = styled.div`
   flex-direction: column;
+
+  @media(max-width: 1360px) {
+    flex-direction: row;
+  }
 `;
 
 const Detail = styled.div`
@@ -82,6 +90,7 @@ const About = (props: AboutProps) => {
 
   return (
     <Root>
+      <h1>Meet the Team</h1>
       {bios}
     </Root>
   );

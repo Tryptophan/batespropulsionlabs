@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import SidebarItem from "./SidebarItem";
+import { useLocation } from "react-router-dom";
 
 import sidebarItems from "./sidebar-items.json";
 
@@ -32,6 +33,10 @@ const Root = styled.div`
   }
   @media (max-width: 1700px) {
     width: 20%;
+  }
+
+  @media(max-width: 1360px) {
+    width: 80%;
   }
 `;
 
@@ -72,10 +77,14 @@ const Toggle = styled.div`
 `;
 
 const Sidebar = (props: SidebarProps) => {
-  
-  let startCollapsed = false;
-  if (window.innerWidth < 1360) startCollapsed = true;
-  const [collapsed, toggle] = useState(startCollapsed);
+  let mobile = false;
+  if (window.innerWidth < 1360) mobile = true;
+  const [collapsed, toggle] = useState(mobile);
+
+  const location = useLocation();
+  useEffect(() => {
+    if (mobile) toggle(true);
+  }, [location, mobile]);
 
   if (collapsed) {
     return (

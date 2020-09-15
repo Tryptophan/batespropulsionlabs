@@ -22,9 +22,6 @@ type BreadcrumbsProps = {
 const Root = styled.div`
   width: 70%;
   margin: 0 auto;
-  img {
-    width: 80%;
-  }
   h1 {
     color: #282c34;
     margin: 0px;
@@ -32,6 +29,10 @@ const Root = styled.div`
   padding-top: 20px;
   a {
     color: #282c34;
+  }
+
+  @media(max-width: 1360px) {
+    display: none;
   }
 `;
 

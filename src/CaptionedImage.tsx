@@ -28,11 +28,16 @@ const CaptionedImage = (props: CaptionedImageProps) => {
       width: calc(100% - 20px);
       border-radius: 5px 5px 0 0;
     }
-    :hover {
+    :hover, :active, :focus {
       span {
         background-color:rgba(0, 0, 0, 0.7);
         padding-bottom: 20px;
       }
+    }
+
+    @media(max-width: 1360px) {
+      height: ${props.height ? props.height : "200px"};
+      font-size: 0.75em;
     }
   `;
 

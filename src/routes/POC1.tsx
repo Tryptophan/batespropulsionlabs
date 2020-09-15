@@ -90,7 +90,7 @@ import PneumaticValvesImg14 from "../assets/poc1-pneumatic-valves/pneumatic-valv
 import PneumaticValvesImg15 from "../assets/poc1-pneumatic-valves/pneumatic-valves-15.jpg";
 
 // Throttle Valves Images
-import ThrottleValvesImg1 from "../assets/poc1-throttle-valves/throttle-valves-1.jpg";
+// import ThrottleValvesImg1 from "../assets/poc1-throttle-valves/throttle-valves-1.jpg";
 
 // Components
 import CaptionedImage from "../CaptionedImage";
@@ -111,6 +111,11 @@ const Videos = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+
+  @media(max-width: 1360px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 const EngineAssembly = styled.div`
@@ -128,11 +133,11 @@ const PneumaticValves = styled.div``;
 
 const ThrottleValves = styled.div``;
 
-const ThrottleValveDesign = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-`;
+// const ThrottleValveDesign = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 40px;
+// `;
 
 const POC1 = (props: POC1Props) => {
   const titles = props.engineSpecs.map(item => (
@@ -384,9 +389,9 @@ const POC1 = (props: POC1Props) => {
     <li key={index}>{intent}</li>
   ));
 
-  let throttleDesignIntent = text.poc1.throttleValves.designIntent.map((intent, index) => (
-    <li key={index}>{intent}</li>
-  ));
+  // let throttleDesignIntent = text.poc1.throttleValves.designIntent.map((intent, index) => (
+  //   <li key={index}>{intent}</li>
+  // ));
 
   return (
     <Root>
@@ -411,8 +416,8 @@ const POC1 = (props: POC1Props) => {
         </Engine>
         <h2>Media</h2>
         <Videos>
-          <ReactPlayer url="https://youtu.be/px7wM-hjnxs" controls={true} />
-          <ReactPlayer url="https://www.youtube.com/watch?v=xe2s8tZXD_c" controls={true} />
+          <ReactPlayer className="Video" url="https://youtu.be/px7wM-hjnxs" controls={true} />
+          <ReactPlayer className="Video" url="https://www.youtube.com/watch?v=xe2s8tZXD_c" controls={true} />
         </Videos>
       </Overview>
       <EngineAssembly>
@@ -484,8 +489,8 @@ const POC1 = (props: POC1Props) => {
         <h4>Testing</h4>
         <p>{text.poc1.pneumaticValves.design2.testing}</p>
         <Videos>
-          <ReactPlayer url="https://www.youtube.com/watch?v=GEod86Dksuo" controls={true} />
-          <ReactPlayer url="https://www.youtube.com/watch?v=xnHX11NeHQ0" controls={true} />
+          <ReactPlayer className="Video" url="https://www.youtube.com/watch?v=GEod86Dksuo" controls={true} />
+          <ReactPlayer className="Video" url="https://www.youtube.com/watch?v=xnHX11NeHQ0" controls={true} />
         </Videos>
         <p>{text.poc1.pneumaticValves.design2.afterTesting}</p>
         <h3>Valve Mounts</h3>
@@ -496,18 +501,19 @@ const POC1 = (props: POC1Props) => {
         <h3>Final Product</h3>
         <ImageGallery showPlayButton={false} items={pneumaticValvesFinalProduct} />
         <h4>Valve Actuation Testing (All Valves)</h4>
-        <ReactPlayer url="https://youtu.be/jxv6eSGMJCA" controls={true} />
+        <ReactPlayer className="Video" url="https://youtu.be/jxv6eSGMJCA" controls={true} />
       </PneumaticValves>
       <ThrottleValves>
         <h2 id="throttle-valves">Throttle Valves</h2>
-        <ThrottleValveDesign>
+        <p>Work in progress...</p>
+        {/* <ThrottleValveDesign>
           <DesignIntent>
             <ul>
               {throttleDesignIntent}
             </ul>
           </DesignIntent>
           <CaptionedImage img={ThrottleValvesImg1} caption="Current Throttle Valve Design" />
-        </ThrottleValveDesign>
+        </ThrottleValveDesign> */}
       </ThrottleValves>
     </Root>
   );

@@ -28,6 +28,10 @@ const ImageSummary = styled.div`
   display: flex;
   gap: 20px;
   margin-bottom: 40px;
+
+  @media(max-width: 1360px) {
+    flex-direction: column;
+  }
 `;
 
 const SummaryAndVideo = styled.div`
@@ -53,7 +57,7 @@ const KNDX1 = () => {
           <CaptionedImage height="800px" img={VerticalIntegratorImg} caption="Vertical Integrator" />
           <SummaryAndVideo>
             <p>{text.verticalIntegrator.summary}</p>
-            <ReactPlayer width="100%" height="auto" url="https://www.youtube.com/watch?v=dbl5VsLI834" controls={true} />
+            <ReactPlayer className="Video" width="100%" height="auto" url="https://www.youtube.com/watch?v=dbl5VsLI834" controls={true} />
           </SummaryAndVideo>
         </ImageSummary>
         <p>{text.verticalIntegrator.designed}</p>
@@ -89,7 +93,7 @@ const KNDX1 = () => {
         </CaptionedImages>
 
         <h3>Parachute Ejection Testing Compilation</h3>
-        <ReactPlayer width="100%" height="60vh" url="https://youtu.be/Wyqd5uTbueM" controls={true} />
+        <ReactPlayer className="Video" width="100%" height="60vh" url="https://youtu.be/Wyqd5uTbueM" controls={true} />
       </Recovery>
       <Avionics>
         <h2 id="avionics">Avionics</h2>

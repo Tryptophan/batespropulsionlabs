@@ -64,7 +64,7 @@ const KNDX1 = () => {
           </Blocks>
         </Engine>
         <h2>Static Fire 1</h2>
-        <ReactPlayer url="https://youtu.be/GNM-Xr77wUs" controls={true} />
+        <ReactPlayer className="Video" url="https://youtu.be/GNM-Xr77wUs" controls={true} />
         <p>{text.kndx1.staticFire1}</p>
         <CaptionedImages>
           <CaptionedImage img={ThrustImg} caption="KNDX-1 Thrust Analysis" />
@@ -72,7 +72,7 @@ const KNDX1 = () => {
         </CaptionedImages>
 
         <h2>Static Fire 2</h2>
-        <ReactPlayer url="https://youtu.be/zCNFceTv2Gs" controls={true} />
+        <ReactPlayer className="Video" url="https://youtu.be/zCNFceTv2Gs" controls={true} />
         <p>{text.kndx1.staticFire2}</p>
 
         <h2>Throat Erosion</h2>
@@ -109,7 +109,7 @@ const KNDX1 = () => {
 
         <p>{text.kndx1.propellantManufacturing.step5}</p>
 
-        <ReactPlayer url="https://youtu.be/OmadxDQUT-w" controls={true} />
+        <ReactPlayer className="Video" url="https://youtu.be/OmadxDQUT-w" controls={true} />
 
         <p>{text.kndx1.propellantManufacturing.step6}</p>
 

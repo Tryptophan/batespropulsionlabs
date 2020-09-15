@@ -17,6 +17,28 @@ export const Root = styled.div`
   }
   padding-top: 20px;
   margin-bottom: 40px;
+
+  @media(max-width: 1360px) {
+    padding-top: 85px;
+    width: 80%;
+    h1 {
+      font-size: 1.5em;
+    }
+    h2 {
+      font-size: 1.2em;
+    }
+    h3 {
+      font-size: 1em;
+    }
+    h4 {
+      font-szie: .75em;
+    }
+
+    .Video {
+      width: 100% !important;
+      max-height: 25vh !important;
+    }
+  }
 `;
 
 export const Overview = styled.div`
@@ -28,6 +50,11 @@ export const Overview = styled.div`
 export const Engine = styled.div`
   display: flex;
   align-items: center;
+
+  @media(max-width: 1360px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const Block = styled.div`
@@ -43,11 +70,24 @@ export const Block = styled.div`
   a {
     color: white;
   }
+
+  @media(max-width: 1360px) {
+    width: auto;
+    // width: 100%;
+    // width: 100%;
+    // h3 {
+    //   font-size: .05em;
+    // }
+  }
 `;
 
 export const Blocks = styled.div`
   display: flex;
   justify-content: space-around;
+
+  @media(max-width: 1360px) {
+    flex-direction: column;
+  }
 `;
 
 export const EngineSpecs = styled(Block)`
@@ -75,4 +115,8 @@ export const CaptionedImages = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 20px;
+
+  @media(max-width: 1360px) {
+    flex-direction: column;
+  }
 `;
