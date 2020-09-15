@@ -8,6 +8,7 @@ import text from "../text.json";
 // Images
 import Eddie from "../assets/about/eddie.jpg";
 import Sam from "../assets/about/sam.jpg";
+import Dhruv from "../assets/about/dhruv.jpg";
 import Jacob from "../assets/about/jacob.jpg";
 
 type AboutProps = {
@@ -21,6 +22,10 @@ const images = [
   {
     name: "Sam Aceves",
     url: Sam
+  },
+  {
+    name: "Dhruv Goel",
+    url: Dhruv
   },
   {
     name: "Jacob Greenway",
