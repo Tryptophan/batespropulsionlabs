@@ -56,6 +56,8 @@ const SidebarItems = styled.ul`
 `;
 
 const SidebarItem = (props: SidebarItemProps) => {
+  let mobile = false;
+  if (window.innerWidth < 1360) mobile = true;
   const [collapsed, toggle] = useState(true);
   const history = useHistory();
 
@@ -72,15 +74,17 @@ const SidebarItem = (props: SidebarItemProps) => {
   } else {
 
     // Check if any children also have children (single-deep item)
-    const linkDropdown = props.item.children.reduce((acc: boolean, curr: Item) => {
+    const linkDropdown = !mobile && props.item.children.reduce((acc: boolean, curr: Item) => {
       return acc && !curr.children;
     }, true);
 
     let children = null;
     if (!collapsed) {
-      const items = props.item.children && props.item.children.map((item, index) => (
-        <SidebarItem key={index} item={item} />
-      ));
+      const items = props.item.children && props.item.children
+        .filter(item => !mobile ? item.name !== "Overview" : true)
+        .map((item, index) => (
+          <SidebarItem key={index} item={item} />
+        ));
       children = (
         <SidebarItems>
           {items}
