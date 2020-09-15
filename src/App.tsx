@@ -84,7 +84,7 @@ const ScrollTo = () => {
 const App = () => {
   return (
     <AppRoot>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         {/* Sidebar navigation */}
         <Sidebar items={sidebarItems} />
         {/* Breadcrumbs, don't render on home or about */}

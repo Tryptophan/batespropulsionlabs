@@ -27,10 +27,6 @@ import PropellantManufacturing9 from "../assets/kndx1/propellant-manufacturing/9
 // Text
 import text from "../text.json";
 
-const StaticFire1 = styled.div`
-  display: flex;
-`;
-
 const PropellantManufacturing = styled.div``;
 
 const KNDX1 = () => {
