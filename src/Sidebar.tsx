@@ -36,7 +36,8 @@ const Root = styled.div`
   }
 
   @media(max-width: 1360px) {
-    width: 80%;
+    width: 100%;
+    padding: 10px;
   }
 `;
 
@@ -50,8 +51,16 @@ const Collapsed = styled(Root)`
   > div {
     margin-bottom: 0px;
   }
+
   @media (max-width: 1700px) {
     width: auto;
+  }
+
+  @media (max-width: 1360px) {
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
   }
 `;
 

@@ -36,6 +36,10 @@ const ItemComp = styled.div`
   :hover {
     background-color: #282c34;
   }
+
+  @media (max-width: 1360px) {
+    padding-right: 40px;
+  }
 `;
 
 const Arrow = styled.span`
