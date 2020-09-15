@@ -49,7 +49,7 @@ const flatten = (items: SidebarItem[]) => {
     return acc;
   }, []);
 }
-const items: SidebarItem[] = flatten(sidebarItems);
+const items: SidebarItem[] = flatten(sidebarItems).filter(item => item.name !== "Overview");
 
 const Breadcrumbs = (props: BreadcrumbsProps) => {
 

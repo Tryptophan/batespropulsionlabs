@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ReactPlayer from "react-player";
 import { Root, Overview, Engine, Blocks, Summary, EngineSpecs, Specs, CaptionedImages } from "./styles";
 import CaptionedImage from "../CaptionedImage";
+import LinkedText from "../LinkedText";
 
 // Images
 import CADImg from "../assets/kndx1/cad.png";
@@ -65,7 +66,14 @@ const KNDX1 = () => {
         </Engine>
         <h2>Static Fire 1</h2>
         <ReactPlayer className="Video" url="https://youtu.be/GNM-Xr77wUs" controls={true} />
-        <p>{text.kndx1.staticFire1}</p>
+        <LinkedText
+          text={text.kndx1.staticFire1}
+          links={[
+            {
+              label: "METEOR",
+              href: "https://meteor.open-sky.fr/#/motorDesign"
+            }
+          ]}/>
         <CaptionedImages>
           <CaptionedImage img={ThrustImg} caption="KNDX-1 Thrust Analysis" />
           <CaptionedImage img={KNDX1Img} caption="KNDX-1" />

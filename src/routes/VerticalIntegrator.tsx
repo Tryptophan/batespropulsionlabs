@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ReactPlayer from "react-player";
 import { Root, Overview, CaptionedImages } from "./styles";
 import CaptionedImage from "../CaptionedImage";
+import LinkedText from "../LinkedText";
 
 // Images
 import VerticalIntegratorImg from "../assets/solid-rocket.png";
@@ -56,7 +57,14 @@ const KNDX1 = () => {
         <ImageSummary>
           <CaptionedImage height="800px" img={VerticalIntegratorImg} caption="Vertical Integrator" />
           <SummaryAndVideo>
-            <p>{text.verticalIntegrator.summary}</p>
+            <LinkedText
+              text={text.verticalIntegrator.summary}
+              links={[
+                {
+                  label: "Richard Nakka's website",
+                  href: "http://www.nakka-rocketry.net"
+                }
+              ]}/>
             <ReactPlayer className="Video" width="100%" height="auto" url="https://www.youtube.com/watch?v=dbl5VsLI834" controls={true} />
           </SummaryAndVideo>
         </ImageSummary>
@@ -69,7 +77,14 @@ const KNDX1 = () => {
       </Overview>
       <Recovery>
         <h2 id="recovery">Recovery</h2>
-        <p>{text.verticalIntegrator.recovery.summary}</p>
+        <LinkedText
+          text={text.verticalIntegrator.recovery.summary}
+          links={[
+            {
+              label: "Richard Nakka's design",
+              href: "http://www.nakka-rocketry.net/paracon.html"
+            }
+          ]}/>
         <CaptionedImages>
           <CaptionedImage img={ParaBuild1} caption="Parachute Section" />
           <CaptionedImage img={ParaBuild2} caption="Sam stitching the parachute sections together" />

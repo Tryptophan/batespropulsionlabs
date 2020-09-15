@@ -99,7 +99,7 @@
     ],
     "summary1": "This engine has its roots in practicing aluminum fuel tank welds, I had been welding some simple test vessels to hydro statically test and realized I could probably turn them into rocket engines. So I did a lot of reading on Richard Nakka's excellent rocket website ",
     "summary2": " and got to work designing my own solid rocket engine. I would not recommend using aluminum for an engine you want to fire many times. However, only having a small G0765 Grizzly 7\" x 14\" Mini lathe, steel turning was outside my capabilities. Aluminum is easy and fast to machine but will erode with multiple firings.",
-    "staticFire1": "In this static fire the engine performed far lower than analytically predicted by METEOR, and took far to long to come up to full thrust. We addressed this by incrasing the amount of black powder in the ignitor, adding slits to the side of the straw ignitor and hot gluing the throat of the engine. This allowed pressure to build in the chamber and combustion to spread before the ignitor was ejected.",
+    "staticFire1": "In this static fire the engine performed far lower than analytically predicted by {link}, and took far to long to come up to full thrust. We addressed this by incrasing the amount of black powder in the ignitor, adding slits to the side of the straw ignitor and hot gluing the throat of the engine. This allowed pressure to build in the chamber and combustion to spread before the ignitor was ejected.",
     "staticFire2": "The second static fire demonstrated much better ramp up time with the new ignitor. The exterior of the engine was also machined down for weight savings. Unfortunately the thrust tester was not zip tied to the test stand and thus no thrust curve was able to be generated with the new ignitor design, and the next test was the maiden flight of the Vertical Integrator.",
     "throatErosion": "As expected after multiple firings the aluminum throat started to erode. So while aluminum engines are easy to make they don't last many firings. This issues was likely exasperated by the step on the inside of the throat. Due to poor machining of the nozzle by the author instead of a the cones meeting at a smooth point, the converging nozzle hits a flat with a thin sharp wall to the expanding nozzle on the other side. This also explains the lower than expected performance.",
     "propellantManufacturing": {
@@ -116,11 +116,11 @@
     }
   },
   "verticalIntegrator": {
-    "summary": "The vertical integrator was a build to rapidly develop a full stack rocket from scratch to gain competency and experience in flight vehicle design before scaling up to a bi-propellant liquid rocket. The rocket was designed and built in 3 weeks with no purchased off the shelf rocket parts. The engine and recovery was inspired by Richard Nakka's website ---, the avionics was optimized for ease of interfacing with minimal time spent in firmware development. The rocket was designed to be modular with mostly 3D printed components to allow rapid iteration and repair.",
+    "summary": "The vertical integrator was a build to rapidly develop a full stack rocket from scratch to gain competency and experience in flight vehicle design before scaling up to a bi-propellant liquid rocket. The rocket was designed and built in 3 weeks with no purchased off the shelf rocket parts. The engine and recovery was inspired by {link}, the avionics was optimized for ease of interfacing with minimal time spent in firmware development. The rocket was designed to be modular with mostly 3D printed components to allow rapid iteration and repair.",
     "designed": "The rocket was designed in SolidWorks with stability and trajectory analysis done in Open Rocket.",
     "flight1": "Flight #1 successfully demonstrated rocket stability, successful ignition and partial functionality of avionics. Recovery failed to deploy which is attributed to a yet un-discovered software bug and the incorrect manually recovery signal was sent (caps-lock caused the wrong P to be sent over serial, room for usability improvements here). Data logging while slow (from long barometer poll time) was functional, barometer seems to be thrown off by engine exhaust during ascent burn.",
     "recovery": {
-      "summary": "For our parachute we went with a semi-ellipsoid design based off Richard Nakka's design with Dragon/Apollo capsule colors. The manufacturing is not complex, but is very time consuming in both hand stitching and machine stitching.",
+      "summary": "For our parachute we went with a semi-ellipsoid design based off {link} with Dragon/Apollo capsule colors. The manufacturing is not complex, but is very time consuming in both hand stitching and machine stitching.",
       "inspired": "Parachute assembly photos, etc. inspired by Richard Nakka",
       "parachute": "With a single stage recovery system we had to trade between impact velocity and horizontal drift. The fins on this rocket were designed to be easily replaceable and thus we priorities minimizing horizontal drift of impact speeds to necessitate a smaller launch site.",
       "gores": "Gores were cut from rip stop nylon using printed flat patterns. The edges are hemmed and then sewed to a binding (not to the other gores) to allow for proper shape at deployment. The parachute is then connected to the rocket using braided Kevlar line.",
@@ -140,7 +140,7 @@
     {
       "name": "Eddie Bates",
       "title": "Chief Engineer/Founder",
-      "industryJob": "Propulsion components Engineer SpaceX",
+      "industryJob": "Propulsion Components Engineer SpaceX",
       "bio": "After coming back to school from SpaceX I needed a project to fill my time and learn from, I felt like I'd learned most of what I could from FSAE so I set out to build my own rocket engine. I grew the project to include some other members and after the first static firing  we started working on some other propulsion/rocketry projects from a cryogenic propulsion system for our capstone to small scale solid rockets."
     },
     {
