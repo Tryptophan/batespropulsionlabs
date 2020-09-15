@@ -123,7 +123,7 @@ const EngineAssembly = styled.div`
 
 const DAQ = styled.div``;
 
-const DesignIntent = styled(Block)`
+const DesignConstraints = styled(Block)`
   ul {
     list-style-type: decimal;
   }
@@ -339,22 +339,26 @@ const POC1 = (props: POC1Props) => {
   let pneumaticValveMounts = [
     {
       original: PVMountsImg1,
-      thumbnail: PVMountsImg1
+      thumbnail: PVMountsImg1,
+      description: "First valve mount design"
     },
     {
       original: PneumaticValvesImg7,
-      thumbnail: PneumaticValvesImg7
+      thumbnail: PneumaticValvesImg7,
+      description: "3D printed valve mount"
     },
     {
       original: PneumaticValvesImg8,
-      thumbnail: PneumaticValvesImg8
+      thumbnail: PneumaticValvesImg8,
+      description: "First valve mount broken by technicians"
     }
   ];
 
   let pvMounts2 = [
     {
       original: PneumaticValvesImg9,
-      thumbnail: PneumaticValvesImg9
+      thumbnail: PneumaticValvesImg9,
+      description: "Offsite plasma cutter"
     },
     {
       original: PneumaticValvesImg10,
@@ -366,7 +370,8 @@ const POC1 = (props: POC1Props) => {
     },
     {
       original: PneumaticValvesImg12,
-      thumbnail: PneumaticValvesImg12
+      thumbnail: PneumaticValvesImg12,
+      description: "Valve mount welded to test stand"
     }
   ];
 
@@ -385,7 +390,7 @@ const POC1 = (props: POC1Props) => {
     }
   ]
 
-  let pneumaticDesignIntent = text.poc1.pneumaticValves.designIntent.map((intent, index) => (
+  let pneumaticDesignConstraints = text.poc1.pneumaticValves.designIntent.map((intent, index) => (
     <li key={index}>{intent}</li>
   ));
 
@@ -469,12 +474,12 @@ const POC1 = (props: POC1Props) => {
       </DAQ>
       <PneumaticValves>
         <h2 id="pneumatic-valves">Pneumatic Valves</h2>
-        <DesignIntent>
-          <h3>Design Intent</h3>
+        <DesignConstraints>
+          <h3>Design Constraints</h3>
           <ul>
-            {pneumaticDesignIntent}
+            {pneumaticDesignConstraints}
           </ul>
-        </DesignIntent>
+        </DesignConstraints>
         <p>{text.poc1.pneumaticValves.earlyDevelopment}</p>
         <CaptionedImages>
           <CaptionedImage img={PVEarlyImg1} caption="Valve" />
@@ -505,13 +510,13 @@ const POC1 = (props: POC1Props) => {
       </PneumaticValves>
       <ThrottleValves>
         <h2 id="throttle-valves">Throttle Valves</h2>
-        <p>Work in progress...</p>
+        <p>This section is a work in progress...</p>
         {/* <ThrottleValveDesign>
-          <DesignIntent>
+          <DesignConstraints>
             <ul>
-              {throttleDesignIntent}
+              {throttleDesignConstraints}
             </ul>
-          </DesignIntent>
+          </DesignConstraints>
           <CaptionedImage img={ThrottleValvesImg1} caption="Current Throttle Valve Design" />
         </ThrottleValveDesign> */}
       </ThrottleValves>
