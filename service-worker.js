@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://tryptophan.github.io/batespropulsionlabs/precache-manifest.a055fc188643dbdc0c4c59643734d87f.js"
+  "https://tryptophan.github.io/batespropulsionlabs/precache-manifest.339d130ebf580d04e2f0ac5fdef25147.js"
 );
 
 self.addEventListener('message', (event) => {
