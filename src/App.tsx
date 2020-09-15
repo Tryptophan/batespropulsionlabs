@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { Link, BrowserRouter, Switch, Route, useLocation } from "react-router-dom";
+import { Link, HashRouter, Switch, Route, useLocation } from "react-router-dom";
 import { Root } from "./routes/styles";
 
 // Components
@@ -84,7 +84,7 @@ const ScrollTo = () => {
 const App = () => {
   return (
     <AppRoot>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         {/* Sidebar navigation */}
         <Sidebar items={sidebarItems} />
         {/* Breadcrumbs, don't render on home or about */}
@@ -122,7 +122,7 @@ const App = () => {
             <IndexPage />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </AppRoot>
   );
 }
