@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/batespropulsionlabs/static/css/main.fddfe593.chunk.css",
-    "main.js": "/batespropulsionlabs/static/js/main.f52c63a2.chunk.js",
-    "main.js.map": "/batespropulsionlabs/static/js/main.f52c63a2.chunk.js.map",
+    "main.js": "/batespropulsionlabs/static/js/main.fbf41ff6.chunk.js",
+    "main.js.map": "/batespropulsionlabs/static/js/main.fbf41ff6.chunk.js.map",
     "runtime-main.js": "/batespropulsionlabs/static/js/runtime-main.efdc42d2.js",
     "runtime-main.js.map": "/batespropulsionlabs/static/js/runtime-main.efdc42d2.js.map",
     "static/css/2.40a775a0.chunk.css": "/batespropulsionlabs/static/css/2.40a775a0.chunk.css",
-    "static/js/2.4c74fc37.chunk.js": "/batespropulsionlabs/static/js/2.4c74fc37.chunk.js",
-    "static/js/2.4c74fc37.chunk.js.map": "/batespropulsionlabs/static/js/2.4c74fc37.chunk.js.map",
+    "static/js/2.480bf916.chunk.js": "/batespropulsionlabs/static/js/2.480bf916.chunk.js",
+    "static/js/2.480bf916.chunk.js.map": "/batespropulsionlabs/static/js/2.480bf916.chunk.js.map",
     "index.html": "/batespropulsionlabs/index.html",
-    "precache-manifest.7ed4033ee256a7b97e9174526f8eb63c.js": "/batespropulsionlabs/precache-manifest.7ed4033ee256a7b97e9174526f8eb63c.js",
+    "precache-manifest.31b3c678f38b007acc8f058ea3e78e4d.js": "/batespropulsionlabs/precache-manifest.31b3c678f38b007acc8f058ea3e78e4d.js",
     "service-worker.js": "/batespropulsionlabs/service-worker.js",
     "static/css/2.40a775a0.chunk.css.map": "/batespropulsionlabs/static/css/2.40a775a0.chunk.css.map",
     "static/css/main.fddfe593.chunk.css.map": "/batespropulsionlabs/static/css/main.fddfe593.chunk.css.map",
-    "static/js/2.4c74fc37.chunk.js.LICENSE.txt": "/batespropulsionlabs/static/js/2.4c74fc37.chunk.js.LICENSE.txt",
+    "static/js/2.480bf916.chunk.js.LICENSE.txt": "/batespropulsionlabs/static/js/2.480bf916.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/batespropulsionlabs/static/media/1.9da65a37.jpg",
     "static/media/1.png": "/batespropulsionlabs/static/media/1.a06f33dd.png",
     "static/media/2.jpg": "/batespropulsionlabs/static/media/2.9833963f.jpg",
@@ -36,6 +36,7 @@
     "static/media/daq-4.png": "/batespropulsionlabs/static/media/daq-4.1eef7bd4.png",
     "static/media/daq-5.png": "/batespropulsionlabs/static/media/daq-5.2cc89a77.png",
     "static/media/deployer.png": "/batespropulsionlabs/static/media/deployer.43576cad.png",
+    "static/media/dhruv.jpg": "/batespropulsionlabs/static/media/dhruv.328220d2.jpg",
     "static/media/eddie.jpg": "/batespropulsionlabs/static/media/eddie.a80763ca.jpg",
     "static/media/engine-assembly-1.jpg": "/batespropulsionlabs/static/media/engine-assembly-1.2cf8aa7f.jpg",
     "static/media/engine-assembly-10.jpg": "/batespropulsionlabs/static/media/engine-assembly-10.40f716e6.jpg",
@@ -112,8 +113,8 @@
   "entrypoints": [
     "static/js/runtime-main.efdc42d2.js",
     "static/css/2.40a775a0.chunk.css",
-    "static/js/2.4c74fc37.chunk.js",
+    "static/js/2.480bf916.chunk.js",
     "static/css/main.fddfe593.chunk.css",
-    "static/js/main.f52c63a2.chunk.js"
+    "static/js/main.fbf41ff6.chunk.js"
   ]
 }
