@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link, HashRouter, Switch, Route, useLocation } from "react-router-dom";
 import { Root } from "./routes/styles";
+import GoogleAnalytics from "react-ga";
 
 // Components
 import Home from "./Home";
@@ -19,6 +20,9 @@ import sidebarItems from "./sidebar-items.json";
 
 // Text
 import text from "./text.json";
+
+// Init Google Analytics
+GoogleAnalytics.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_ID || "");
 
 // Styles
 const AppRoot = styled.div`
@@ -63,6 +67,15 @@ const IndexPage = () => {
   );
 }
 
+const GATracker = () => {
+  const location = useLocation();
+  useEffect(() => {
+    GoogleAnalytics.pageview(location.pathname + location.hash);
+  }, [location]);
+
+  return null;
+}
+
 const ScrollTo = () => {
   const location = useLocation();
   useEffect(() => {
@@ -85,6 +98,7 @@ const App = () => {
   return (
     <AppRoot>
       <HashRouter basename={process.env.PUBLIC_URL}>
+        <GATracker />
         {/* Sidebar navigation */}
         <Sidebar items={sidebarItems} />
         {/* Breadcrumbs, don't render on home or about */}
