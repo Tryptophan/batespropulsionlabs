@@ -145,7 +145,7 @@
     },
     {
       "name": "Sam Aceves",
-      "title": "System/Recovery/Ignitor/Valves",
+      "title": "System/Recovery/Ignitor/Valves Lead",
       "contributions": [
         "POC-1 Pneumatics Valves",
         "POC-1 Throttle Valves",
@@ -159,6 +159,12 @@
       "title": "Electrical Lead",
       "industryJob": "Tinker Air Force Base Electrical Engineering Intern",
       "bio": "I met Eddie through the FSAE team at UTD. I was asked to join the team by Eddie just prior to the warm firing of POC-1 as the test stand needed an overhaul of its control system. During my time here I have redesigned the controls and data collection system for the test stand as well as designed flight versions of these systems with telemetry for integration into our present and future launch vehicles. I have also been working on propellant tank design, throttle valve assemblies, and recovery systems for the NOS rocket. My interests center around embedded systems, mixed signal processing, and RF/Radar design."
+    },
+    {
+      "name": "Chris Vallone",
+      "title": "Additive Manufacturing Engineer ",
+      "industryJob": "BMS Systems Electrical Engineering Intern at Bloodshed Motors",
+      "bio": "I joined my roommate Eddie's rocket team as chief electrical engineer in November of 2019 when POC-1 was still in its early schematic phase. As a new member of POC-1, I took responsibility for electronics, software, structure design, CAD, and fluid routing for the static fire test stand and press system. 4 months later, we had a reliable stand with software, electronics, high frequency data logging and a real time GUI flowing fluids and logging data, which was an incredible journey for me to own and deliver on a fast timeline. After the warm fire test, I handed my responsibilities as electrical engineer to Dhruv and relinquished my role on the team. My greatest lesson on POC-1 wasn’t only the value of delivering on goals and timelines rapidly, but also the value of being a good team player. I still contribute and help Eddie and my friends by 3d printing parts."
     },
     {
       "name": "Jacob Greenway",
