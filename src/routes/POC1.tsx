@@ -94,6 +94,7 @@ import PneumaticValvesImg15 from "../assets/poc1-pneumatic-valves/pneumatic-valv
 
 // Components
 import CaptionedImage from "../CaptionedImage";
+import LinkedText from "../LinkedText";
 
 // Types
 type POC1Props = {
@@ -442,7 +443,16 @@ const POC1 = (props: POC1Props) => {
         <h3>Warm Fire</h3>
         <p>{text.poc1.engineAssembly.warmFire}</p>
         <ImageGallery showPlayButton={false} items={warmFire} />
-        <p>{text.poc1.engineAssembly.postWarmFire}<span>TODO</span></p>
+        <LinkedText
+          text={text.poc1.engineAssembly.postWarmFire}
+          links={[
+            {
+              label: "learn ways NOT to make a combustion chamber",
+              href: "/#lessons-learned",
+              local: true
+            }
+          ]}/>
+        {/* <p>{text.poc1.engineAssembly.postWarmFire}<span>TODO</span></p> */}
         <h3>Water Jacket</h3>
         <p>{text.poc1.engineAssembly.waterJacket1}</p>
         <p>{text.poc1.engineAssembly.waterJacket2}</p>

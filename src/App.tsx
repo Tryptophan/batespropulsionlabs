@@ -11,6 +11,8 @@ import KNDX1 from "./routes/KNDX1";
 import VerticalIntegrator from "./routes/VerticalIntegrator";
 import NitrousOxide from "./routes/NitrousOxide";
 import About from "./routes/About";
+import Shop from "./routes/Shop";
+import Dumb from "./routes/Dumb";
 
 import Sidebar from "./Sidebar";
 import Breadcrumbs from "./Breadcrumbs";
@@ -127,6 +129,14 @@ const App = () => {
           <Route path="/engines/liquid-propellant/nitrous-oxide">
             <ScrollTo />
             <NitrousOxide />
+          </Route>
+          <Route path="/lessons-learned">
+            <ScrollTo />
+            <Dumb />
+          </Route>
+          <Route path="/shop">
+            <ScrollTo />
+            <Shop />
           </Route>
           <Route path="/about">
             <ScrollTo />

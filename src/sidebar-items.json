@@ -90,6 +90,14 @@
     ]
   },
   {
+    "name": "Lessons Learned",
+    "link": "/lessons-learned"
+  },
+  {
+    "name": "Our Shop and Test Site",
+    "link": "/shop"
+  },
+  {
     "name": "About Us",
     "link": "/about"
   }
