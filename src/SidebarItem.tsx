@@ -6,7 +6,8 @@ import { useHistory } from "react-router-dom";
 type Item = {
   name: string,
   link: string,
-  children?: Item[]
+  children?: Item[],
+  separatePages?: boolean
 }
 
 type SidebarItemProps = {
@@ -104,7 +105,7 @@ const SidebarItem = (props: SidebarItemProps) => {
       </React.Fragment>
     );
 
-    if (linkDropdown) {
+    if (linkDropdown && !props.item.separatePages) {
       return (
         <Root>
           <Link onClick={() => history.push(props.item.link)}>

@@ -120,3 +120,15 @@ export const CaptionedImages = styled.div`
     flex-direction: column;
   }
 `;
+
+export const Videos = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+
+  @media(max-width: 1360px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+`;

@@ -13,7 +13,8 @@ type Breadcrumb = {
 type SidebarItem = {
   name: string,
   link: string,
-  children?: SidebarItem[]
+  children?: SidebarItem[],
+  separatePages?: boolean
 }
 
 type BreadcrumbsProps = {

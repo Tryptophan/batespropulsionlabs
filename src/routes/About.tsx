@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Root } from "./styles";
+import ImageGallery from "react-image-gallery";
 
 // Text
 import text from "../text.json";
@@ -11,6 +12,13 @@ import Sam from "../assets/about/sam.jpg";
 import Dhruv from "../assets/about/dhruv.jpg";
 import Chris from "../assets/about/chris.jpg";
 import Jacob from "../assets/about/jacob.jpg";
+
+import Shop1Img from "../assets/shop/shop1.jpg";
+import Shop2Img from "../assets/shop/shop2.jpg";
+import Shop3Img from "../assets/shop/shop3.jpg";
+import Shop4Img from "../assets/shop/shop4.jpg";
+import Shop5Img from "../assets/shop/shop5.jpg";
+import Shop6Img from "../assets/shop/shop6.jpg";
 
 type AboutProps = {
 }
@@ -74,6 +82,54 @@ const Detail = styled.div`
   }
 `;
 
+const ShopRoot = styled.div`
+  margin-top: 40px;
+`;
+
+let shopSlider = [
+  {
+    original: Shop1Img,
+    thumbnail: Shop1Img
+  },
+  {
+    original: Shop2Img,
+    thumbnail: Shop2Img
+  },
+  {
+    original: Shop3Img,
+    thumbnail: Shop3Img
+  }
+];
+
+let testSiteSlider = [
+  {
+    original: Shop4Img,
+    thumbnail: Shop4Img
+  },
+  {
+    original: Shop5Img,
+    thumbnail: Shop5Img
+  },
+  {
+    original: Shop6Img,
+    thumbnail: Shop6Img
+  }
+];
+
+const Shop = () => {
+  return (
+    <ShopRoot>
+      <h1>Our Shop and Test Site</h1>
+      <h2>The Shop</h2>
+      <p>{text.shop.summary}</p>
+      <ImageGallery showPlayButton={false} items={shopSlider} />
+      <h2>The Test Site</h2>
+      <p>{text.shop.testSite}</p>
+      <ImageGallery showPlayButton={false} items={testSiteSlider} />
+    </ShopRoot>
+  );
+}
+
 const About = (props: AboutProps) => {
 
   const bios = text.about.map((bio, index) => {
@@ -102,6 +158,7 @@ const About = (props: AboutProps) => {
     <Root>
       <h1>Meet the Team</h1>
       {bios}
+      <Shop />
     </Root>
   );
 }
