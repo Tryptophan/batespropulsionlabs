@@ -1,5 +1,4 @@
 import React from "react";
-import { Root } from "./styles";
 import ImageGallery from 'react-image-gallery';
 import LinkedText from "../LinkedText";
 
@@ -55,10 +54,10 @@ let weldedSheetMetalSlider = [
 
 const Dumb = () => {
   return (
-    <Root>
-      <h1>Lessons Learned from Combustion Chamber Ideas</h1>
+    <React.Fragment>
+      <h2 id="alternate-combustion-chambers">Lessons Learned from Combustion Chamber Ideas</h2>
       <p>{text.dumb.summary}</p>
-      <h2>Aluminum Casting</h2>
+      <h3>Aluminum Casting</h3>
       <LinkedText
           text={text.dumb.aluminumCasting}
           links={[
@@ -68,10 +67,10 @@ const Dumb = () => {
             }
           ]}/>
       <ImageGallery showPlayButton={false} items={aluminumCastingSlider} />
-      <h2>Welded Sheet Metal</h2>
+      <h3>Welded Sheet Metal</h3>
       <p>{text.dumb.weldedSheetMetal}</p>
       <ImageGallery showPlayButton={false} items={weldedSheetMetalSlider} />
-    </Root>
+    </React.Fragment>
   );
 }
 

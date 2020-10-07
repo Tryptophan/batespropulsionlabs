@@ -14,15 +14,9 @@ type LinkedTextProps = {
 const LinkedText = (props: LinkedTextProps) => {
 
   const anchors = props.links.map((link) => {
-    if (link.local) {
-      return (
-        `<a href="${process.env.PUBLIC_URL + link.href}">${link.label}</a>`
-      )
-    } else {
-      return (
-        `<a target="_blank" rel="noopener noreferrer" href="${link.href}">${link.label}</a>`
-      );
-    }
+    return (
+      `<a target="_blank" rel="noopener noreferrer" href="${link.href}">${link.label}</a>`
+    );
   });
 
   let index = 0;

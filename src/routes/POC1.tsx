@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
 import ImageGallery from 'react-image-gallery';
-import { Videos, Root, Overview, Engine, Blocks, Summary, EngineSpecs, Specs, CaptionedImages } from "./styles";
+import { Videos, Link, Root, Overview, Engine, Blocks, Summary, EngineSpecs, Specs, CaptionedImages } from "./styles";
+import Dumb from "./Dumb";
+import { useHistory } from "react-router-dom";
 
 // Text
 import text from "../text.json";
@@ -65,7 +67,6 @@ import DAQImg5 from "../assets/poc1-daq/daq-5.png";
 
 // Components
 import CaptionedImage from "../CaptionedImage";
-import LinkedText from "../LinkedText";
 
 // Types
 type POC1Props = {
@@ -84,6 +85,7 @@ const EngineAssembly = styled.div`
 const DAQ = styled.div``;
 
 const POC1 = (props: POC1Props) => {
+  const history = useHistory();
   const titles = props.engineSpecs.map(item => (
     <li key={item.title}>{item.title}</li>
   ));
@@ -294,16 +296,12 @@ const POC1 = (props: POC1Props) => {
         <h3>Warm Fire</h3>
         <p>{text.poc1.engineAssembly.warmFire}</p>
         <ImageGallery showPlayButton={false} items={warmFire} />
-        <LinkedText
-          text={text.poc1.engineAssembly.postWarmFire}
-          links={[
-            {
-              label: "learn ways NOT to make a combustion chamber",
-              href: "/#lessons-learned",
-              local: true
-            }
-          ]}/>
-        {/* <p>{text.poc1.engineAssembly.postWarmFire}<span>TODO</span></p> */}
+        <p>
+          {text.poc1.engineAssembly.postWarmFire}
+          <Link onClick={() => history.push("/engines/liquid-propellant/poc-1#alternate-combustion-chambers")}>
+            Alternate Combustion Chambers.
+          </Link>
+        </p>
         <h3>Water Jacket</h3>
         <p>{text.poc1.engineAssembly.waterJacket1}</p>
         <p>{text.poc1.engineAssembly.waterJacket2}</p>
@@ -333,6 +331,7 @@ const POC1 = (props: POC1Props) => {
           <CaptionedImage img={DAQImg5} caption="Master Control Panel" />
         </CaptionedImages>
       </DAQ>
+      <Dumb />
     </Root>
   );
 }

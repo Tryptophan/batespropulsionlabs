@@ -26,6 +26,10 @@
               {
                 "name": "DAQ",
                 "link": "/engines/liquid-propellant/poc-1#daq"
+              },
+              {
+                "name": "Alternate Combustion Chambers",
+                "link": "/engines/liquid-propellant/poc-1#alternate-combustion-chambers"
               }
             ]
           },
@@ -95,10 +99,6 @@
         "link": "/valves/solenoid-valve"
       }
     ]
-  },
-  {
-    "name": "Alternate Combustion Chambers",
-    "link": "/alternate-combustion-chambers"
   },
   {
     "name": "About Us",

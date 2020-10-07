@@ -132,3 +132,10 @@ export const Videos = styled.div`
     gap: 20px;
   }
 `;
+
+export const Link = styled.span`
+  text-decoration: underline;
+  :hover {
+    cursor: pointer;
+  }
+`;
