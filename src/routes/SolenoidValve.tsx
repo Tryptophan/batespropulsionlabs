@@ -56,6 +56,7 @@ const SolenoidValve = () => {
       <h1>Solenoid Valve</h1>
       <p>{text.valves.solenoidValve.summary}</p>
       <CaptionedImage img={SolenoidImg1} caption={"Valve Designs"} />
+      <ReactPlayer style={{marginTop: "30px"}} url="https://youtu.be/R8LfG0Wj1AU" controls={true} />
 
       <h2>Upgrades from V1 to V2</h2>
       <p>{text.valves.solenoidValve.upgrades1}</p>
