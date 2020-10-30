@@ -13,6 +13,7 @@ import NitrousOxide from "./routes/NitrousOxide";
 import About from "./routes/About";
 import PneumaticValves from "./routes/PneumaticValves";
 import SolenoidValve from "./routes/SolenoidValve";
+import Sponsors from "./routes/Sponsors";
 
 import Sidebar from "./Sidebar";
 import Breadcrumbs from "./Breadcrumbs";
@@ -141,6 +142,10 @@ const App = () => {
           <Route path="/about">
             <ScrollTo />
             <About />
+          </Route>
+          <Route path="/sponsors">
+            <ScrollTo />
+            <Sponsors />
           </Route>
           <Route>
             <IndexPage />
